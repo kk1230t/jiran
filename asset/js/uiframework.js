@@ -1649,11 +1649,16 @@
 				_.currentImgLoaded(mode);
                 console.log(_.mediaInfo)
                 _.initSlider()
-			});
-			win.on('load', function(e){
+			})
+            .on('load', function(e){
 				_.initLibray();
-                _.initSlider()
+                _.initSlider();
+                _.initHeight();
             })
+            .on('load resize', function(e){
+                _.initHeight();
+            })
+
 
 
 			_.element.on('click', '#bgDim', function(e){
@@ -1747,6 +1752,24 @@
                     $("#box_slider").data('swiper').destroy()
                 }
             }
+        },
+        initHeight : function(){
+            var _ = this;
+            var minHeight = {
+                mobile : 640,
+                tablet :600,
+                pc : 700
+            }
+            var height;
+            if(_.mediaInfo == 'pc'){
+                height = $(window).height() >= minHeight.pc ? $(window).height() : minHeight.pc
+            }else if(_.mediaInfo == 'tablet'){
+                height = $(window).height() >= minHeight.tablet ? $(window).height() : minHeight.tablet
+            }else if(_.mediaInfo == 'mobile'){
+                height = $(window).height() >= minHeight.mobile ? $(window).height() : minHeight.mobile
+            }
+            $('#visualSec').height(height);
+            $('#container').css('padding-top', height+'px')
         },
         initLibrary : function(){
 			var _ = this;

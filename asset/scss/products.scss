@@ -132,6 +132,7 @@ $main_color01: #00848d !default;
 .visual_sec{
     width: 1280px;
     position: fixed;
+    box-sizing: border-box;
     top:0;
     left: 50%;
     transform: translate(-50%, 0);
