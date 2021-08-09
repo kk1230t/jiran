@@ -7,12 +7,17 @@
         background: transparent;
         box-shadow: none;
         box-sizing: border-box;
+
         // .gnb_s{
         //     ul{
         //         display: none
         //     }
         // }
         .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             h1 a{
                 background-image: url('../../images/product/ci-jiran-security-wh.png');
                 background-size: 176px;
@@ -53,12 +58,14 @@
         background: #00848d;
     }
     #container{
+        padding-top: 760px;
         width: 100%;
         min-width: 0;
+        z-index: 999;
     }
     #footer{
         margin-top: 0;
-        z-index: 2;
+        z-index: 999;
 
     }
     @include respondToMinMax(0,1279){
@@ -72,7 +79,7 @@
     }
 }
 .prd_conts{
-    margin-top: 760px;
+    
     background: #fff;
     position: relative;
     z-index: 20;

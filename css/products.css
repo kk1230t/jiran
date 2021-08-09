@@ -7,39 +7,46 @@
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box; }
-    #wrap.products #header .header h1 a {
-      background-image: url("../../images/product/ci-jiran-security-wh.png");
-      background-size: 176px; }
-    #wrap.products #header .header .gnb ul li a {
-      color: #fff; }
-    #wrap.products #header .header .gnb_s ul li a {
-      color: #fff; }
-    #wrap.products #header .header .gnb_s ul li.gnb05 {
-      background: none;
-      position: relative; }
-      #wrap.products #header .header .gnb_s ul li.gnb05:after {
-        content: '';
-        display: block;
-        width: 1px;
-        height: 14px;
-        background: rgba(255, 255, 255, 0.4);
-        position: absolute;
-        right: 0;
-        top: 5px; }
-    #wrap.products #header .header .gnb_s .btn_search {
-      background-image: url("../../images/product/ico-gnb-search.png");
-      background-size: 100%; }
-    #wrap.products #header .header .gnb_s .btn_menu {
-      background-image: url("../../images/product/ico-gnb-allmenu.png");
-      background-size: 100%; }
+    #wrap.products #header .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0; }
+      #wrap.products #header .header h1 a {
+        background-image: url("../../images/product/ci-jiran-security-wh.png");
+        background-size: 176px; }
+      #wrap.products #header .header .gnb ul li a {
+        color: #fff; }
+      #wrap.products #header .header .gnb_s ul li a {
+        color: #fff; }
+      #wrap.products #header .header .gnb_s ul li.gnb05 {
+        background: none;
+        position: relative; }
+        #wrap.products #header .header .gnb_s ul li.gnb05:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 14px;
+          background: rgba(255, 255, 255, 0.4);
+          position: absolute;
+          right: 0;
+          top: 5px; }
+      #wrap.products #header .header .gnb_s .btn_search {
+        background-image: url("../../images/product/ico-gnb-search.png");
+        background-size: 100%; }
+      #wrap.products #header .header .gnb_s .btn_menu {
+        background-image: url("../../images/product/ico-gnb-allmenu.png");
+        background-size: 100%; }
   #wrap.products.page01 {
     background: #00848d; }
   #wrap.products #container {
+    padding-top: 760px;
     width: 100%;
-    min-width: 0; }
+    min-width: 0;
+    z-index: 999; }
   #wrap.products #footer {
     margin-top: 0;
-    z-index: 2; }
+    z-index: 999; }
   @media (min-width: 0px) and (max-width: 1279px) {
     #wrap.products {
       min-width: 0; }
@@ -49,7 +56,6 @@
         min-width: 0; } }
 
 .prd_conts {
-  margin-top: 760px;
   background: #fff;
   position: relative;
   z-index: 20; }
