@@ -1,6 +1,6 @@
 @import "./asset/scss/core/mixins";
 @import "./asset/scss/core/varialbles";
-
+$main_color01: #00848d !default;
 #wrap.products{
     overflow-x:visible;
     #header{
@@ -55,7 +55,49 @@
         }
     }
     &.page01{
-        background: #00848d;
+        background: $main_color01;
+        .prd_scroll_spy{
+            .prd_sec{
+                .title{
+                    em{
+                        color: $main_color01;
+                    }
+                }
+                .decs, .sub_decs{
+                    i{
+                        color: $main_color01;
+                    }
+                }
+                .prd_use{
+                    .box{
+                        .lists{
+
+                            .link{
+                                color: $main_color01;
+                                border-bottom: 1px solid $main_color01;
+                            }
+                            .num{
+                                i{
+                                    background: $main_color01;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.guide{
+                    background: $main_color01;
+                }
+            }
+            .scroll_spy_nav{
+                li.ui-active{
+                    a span{
+                        color: $main_color01;
+                        border-bottom: 2px solid $main_color01;
+                    }
+                }
+            }
+        }
+
     }
     #container{
         padding-top: 760px;
@@ -309,12 +351,6 @@
                 min-width: 120px;
                 display: block;
             }
-            &.ui-active{
-                a span{
-                    color: #00848d;
-                    border-bottom: 2px solid #00848d;
-                }
-            }
             @include respondTo(mobile){
                 margin: 0 10px;
                 &:first-child{
@@ -368,9 +404,6 @@
             font-size: 36px;
             letter-spacing: -1px;
             line-height: 1.5;
-            em{
-                color: #00848d;
-            }
             @include respondTo(mobile){
                 font-size: 24px;
             }
@@ -383,9 +416,6 @@
             em{
                 font-weight: 700;
                 color: #333;
-            }
-            i{
-                color: #00848d;
             }
             @include respondToMinMax(0,1279){
                 br{
@@ -409,9 +439,6 @@
             margin-top: 70px;
             font-weight: 500;
             line-height: 1.5;
-            i{
-                color: #00848d;
-            }
             @include respondTo(mobile){
                 margin-top: 26px;
                 text-align: left;
@@ -699,9 +726,7 @@
                         bottom: 54px;
                         left: 40px;
                         font-size: 15px;
-                        color: #00848d;
                         font-weight: 500;
-                        border-bottom: 1px solid #00848d;
                     }
                     .img_ico{
                         position: absolute;
@@ -713,7 +738,6 @@
                             display: inline-block;
                             width: 6px;
                             height: 6px;
-                            background: #00848d;
                             margin-right: 4px;
                             border-radius: 50%;
                         }
@@ -766,7 +790,6 @@
                                 display: inline-block;
                                 width: 6px;
                                 height: 6px;
-                                background: #00848d;
                                 margin-right: 4px;
                                 border-radius: 50%;
                             }
@@ -787,7 +810,6 @@
             }
         }
         &.guide{
-            background: #00848d;
             padding: 80px;
             color: #fff;
             .qu1{

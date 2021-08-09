@@ -39,6 +39,20 @@
         background-size: 100%; }
   #wrap.products.page01 {
     background: #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .prd_sec .title em {
+      color: #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .prd_sec .decs i, #wrap.products.page01 .prd_scroll_spy .prd_sec .sub_decs i {
+      color: #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .prd_sec .prd_use .box .lists .link {
+      color: #00848d;
+      border-bottom: 1px solid #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .prd_sec .prd_use .box .lists .num i {
+      background: #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .prd_sec.guide {
+      background: #00848d; }
+    #wrap.products.page01 .prd_scroll_spy .scroll_spy_nav li.ui-active a span {
+      color: #00848d;
+      border-bottom: 2px solid #00848d; }
   #wrap.products #container {
     padding-top: 760px;
     width: 100%;
@@ -243,9 +257,6 @@
       font-weight: 700;
       min-width: 120px;
       display: block; }
-    .prd_scroll_spy .scroll_spy_nav li.ui-active a span {
-      color: #00848d;
-      border-bottom: 2px solid #00848d; }
     @media (min-width: 0px) and (max-width: 767px) {
       .prd_scroll_spy .scroll_spy_nav li {
         margin: 0 10px; }
@@ -289,8 +300,6 @@
     font-size: 36px;
     letter-spacing: -1px;
     line-height: 1.5; }
-    .prd_scroll_spy .prd_sec .title em {
-      color: #00848d; }
     @media (min-width: 0px) and (max-width: 767px) {
       .prd_scroll_spy .prd_sec .title {
         font-size: 24px; } }
@@ -302,8 +311,6 @@
     .prd_scroll_spy .prd_sec .decs em {
       font-weight: 700;
       color: #333; }
-    .prd_scroll_spy .prd_sec .decs i {
-      color: #00848d; }
     @media (min-width: 0px) and (max-width: 1279px) {
       .prd_scroll_spy .prd_sec .decs br {
         display: none; } }
@@ -322,8 +329,6 @@
     margin-top: 70px;
     font-weight: 500;
     line-height: 1.5; }
-    .prd_scroll_spy .prd_sec .sub_decs i {
-      color: #00848d; }
     @media (min-width: 0px) and (max-width: 767px) {
       .prd_scroll_spy .prd_sec .sub_decs {
         margin-top: 26px;
@@ -555,9 +560,7 @@
           bottom: 54px;
           left: 40px;
           font-size: 15px;
-          color: #00848d;
-          font-weight: 500;
-          border-bottom: 1px solid #00848d; }
+          font-weight: 500; }
         .prd_scroll_spy .prd_sec .prd_use .box .lists .img_ico {
           position: absolute;
           bottom: 27px;
@@ -566,7 +569,6 @@
           display: inline-block;
           width: 6px;
           height: 6px;
-          background: #00848d;
           margin-right: 4px;
           border-radius: 50%; }
         .prd_scroll_spy .prd_sec .prd_use .box .lists dl {
@@ -609,7 +611,6 @@
               display: inline-block;
               width: 6px;
               height: 6px;
-              background: #00848d;
               margin-right: 4px;
               border-radius: 50%; }
             .prd_scroll_spy .prd_sec .prd_use .box .lists dl {
@@ -621,7 +622,6 @@
                 font-size: 15px;
                 margin-top: 20px; } }
   .prd_scroll_spy .prd_sec.guide {
-    background: #00848d;
     padding: 80px;
     color: #fff; }
     .prd_scroll_spy .prd_sec.guide .qu1 {

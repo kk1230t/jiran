@@ -1705,9 +1705,11 @@
                 var animate = false;
 
                 if(wheelPos > 0 && scrollTop < scrollNav-10 && !animate ){
+                    e.preventDefault();
                     $('html, body').stop().animate({scrollTop: scrollNav}, 500, function(){
                         animate = false;
                     });
+                    
                 }
 
 			});
