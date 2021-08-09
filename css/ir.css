@@ -1,0 +1,253 @@
+@charset "utf-8"; 
+
+.invest{}
+.invest:after{content:""; display:block; clear:both}
+.invest .btn_list{display:none}
+
+/* 투자정보 상단 주식정보 섹션 */
+#invest_stock{position:relative; z-index:100; width:100%}
+#invest_stock .top_info{display:block; width:1280px; height:240px; margin:0 auto; text-align:center; opacity:0.9}
+#invest_stock .top_info h2{display:inline-block; margin:80px auto 0 auto; color:#111; font-size:3.000em; font-weight:700; letter-spacing:-2px}
+#invest_stock .top_info .subtit_desc{margin:20px 0 0; color:#555; font-size:1.125em; line-height:2.000em; letter-spacing:-1px}
+#invest_stock .top_info .subtit_desc>span{display:inline}
+#invest_stock .stock_top_info{width:100%; min-width:1280px; height:466px; margin:0 auto; padding:60px 0; background:#f5f6f8; box-sizing:border-box}
+#invest_stock .stock_top_info .stock_info{width:1280px; height:auto; margin:0 auto}
+#invest_stock .stock_top_info .stock_info h2{display:block; font-size:36px; margin-bottom:40px; font-weight:bold; letter-spacing:-2px}
+#invest_stock .stock_top_info .stock_info p.stock_notice{font-size:14px; line-height:32px; color:#555; text-align:center}
+#invest_stock .stock_top_info .stock_info p.stock_notice i{font-style:normal}
+
+#invest_stock .irInfo{display:inline-block; width:1280px; margin-bottom:40px; text-align:center}
+#invest_stock .irInfo .irinner{float:left; width:620px; height:180px; margin-right:20px; /* padding:0 35px; */background:#fff; box-sizing:border-box}
+#invest_stock .irInfo .irinner:after{content:""; display:block; clear:both}
+#invest_stock .irInfo .irinner .js_number{margin:25px 0 20px 0; font-size:16px; line-height:2; color:#959595}
+#invest_stock .irInfo .stock_present{float:left; margin:10px 0 0 70px; padding-right:10px}
+#invest_stock .irInfo .stock_present .present{padding-left:40px; font-family:'Noto Sans KR'; font-weight:900; font-size:60px; line-height:42px; color:#222; background:url('../images/ir/ico-stock-triangle-red.png') no-repeat 0 12px}
+#invest_stock .irInfo .stock_present .present.up{padding-left:40px; font-family:'Noto Sans KR'; font-weight:900; font-size:60px; line-height:42px; color:#222; background:url('../images/ir/ico-stock-triangle-red.png') no-repeat 0 12px}
+#invest_stock .irInfo .stock_present .present.down{padding-left:40px; font-family:'Noto Sans KR'; font-weight:900; font-size:60px; line-height:42px; color:#222; background:url('../images/ir/ico-stock-triangle-red.png') no-repeat 0 12px}
+#invest_stock .irInfo .stock_present .present p{}
+#invest_stock .irInfo .stock_won{float:left; display:inline-block; margin:10px 70px 0 5px; font-family:'Noto Sans KR'; font-size:16px; line-height:26px; color:#555; vertical-align:baseline; text-align:left}
+#invest_stock .irInfo .stock_won .won{font-size:18px; font-weight:bold}
+
+#invest_stock .irInfo .changeD{float:left; display:inline-block; border-left:1px solid #ddd}
+#invest_stock .irInfo .changeD span{display:block; margin:0 0 10px 30px; text-align:left}
+#invest_stock .irInfo .changeD p{display:inline-block; font-family:'Noto Sans KR'; font-weight:300; font-size:16px; color:#555}
+#invest_stock .irInfo .changeD p.stock_tit{width:90px}
+#invest_stock .irInfo .changeD p.up{width:65px; font-weight:bold; color:#f80000; text-align:right}
+#invest_stock .irInfo .changeD p.down{width:65px; font-weight:bold; color:#004ff0; text-align:right}
+
+
+#invest_stock .irInfo .infoList{float:left; width:620px; height:180px; margin-left:20px; padding:0; background:#fff; box-sizing:border-box}
+#invest_stock .irInfo .infoList .list{float:left; padding-bottom:30px; width:155px; background:#fff; border-right:1px solid #f0f0f2; box-sizing:border-box}
+#invest_stock .irInfo .infoList .list:last-child{border-right:0px none}
+#invest_stock .irInfo .infoList .list .tit{position:relative; padding:30px 0; font-family:'Noto Sans KR'; font-weight:700; font-size:16px; line-height:32px; color:#555; letter-spacing:-1px}
+#invest_stock .irInfo .infoList .list:nth-child(5) .tit, #invest_stock .irInfo .infoList .list:nth-child(6) .tit{padding-bottom:0}
+#invest_stock .irInfo .infoList .list:nth-child(n+6) .tit:after{display:none}
+#invest_stock .irInfo .infoList .list:nth-child(5) .con, #invest_stock .irInfo .infoList .list:nth-child(6) .con{margin-top:55px}
+#invest_stock .irInfo .infoList .list .tit:after{content:''; display:block; position:absolute; bottom:0; left:50%; margin-left:-10px; width:24px; height:2px; background:#f0f0f2}
+#invest_stock .irInfo .infoList .list .tit span{color:#888}
+#invest_stock .irInfo .infoList .list .con{margin-top:26px; font-family:'Noto Sans KR'; font-weight:900; font-size:28px; line-height:32px; color:#111; letter-spacing:-1px}
+#invest_stock .irInfo .infoList .list .change{margin-top:20px; font-family:'Noto Sans KR'; font-weight:900; font-size:18px; line-height:13px}
+#invest_stock .irInfo .infoList .list .change b{display:inline-block; margin-top:-1px; font-size:12px; vertical-align:top}
+#invest_stock .irInfo .infoList .list .change.up{color:#f80000}
+#invest_stock .irInfo .infoList .list .change.down{color:#004ff0}
+
+
+/* 재무정보 */
+/*table*/
+.sect_inner{width:1200px; margin:0 auto}
+.sect_inner + .sect_inner{margin-top:40px}
+.sect_inner::after{display:block; content:""; clear:both}
+.sect_top_txt{font-weight:600; font-size:30px; color:#1c1c1c; line-height:44px; text-align:center}
+.sect_inner .table_tit h1{margin-bottom:30px; font-weight:bold; font-size:36px; letter-spacing:-1px; color:#111111}
+
+/* table_wrap */
+.table_wrap + .btn_wrap{margin-top:50px}
+.table_wrap + .table_wrap{margin-top:100px}
+.table_wrap .sect_tit{margin-bottom:20px}
+
+/* fix_table */
+.fix_table table{float:left; width:300px; border-top:2px solid #282828; border-bottom:1px solid #cecece}
+.fix_table thead th{padding:25px 0; background-color:#f5f6f8; border-right:1px solid #cecece; font-weight:bold; font-size:18px; line-height:24px; color:#282828; }
+.fix_table thead th:last-child{border-right:none}
+.fix_table tbody th, .fix_table tbody td{padding:23px 0; border-top:1px solid #cecece; border-right:1px solid #cecece; font-weight:400; font-size:16px; color:#1c1c1c; line-height:1; text-align:center}
+.fix_table tbody td:last-child{border-right:none}
+.fix_table tbody .table_total th, .fix_table tbody .table_total td{background-color:rgba(255, 127, 0, 0.05); font-weight:bold}
+.fix_table .table_etc{overflow:hidden; margin-bottom:10px}
+.fix_table .table_caption{float:left; font-size:14px; color:#666}
+.fix_table .table_caption::before{content:""; display:inline-block; width:3px; height:3px; margin-right:8px; background-color:#f60; vertical-align:middle}
+.fix_table .table_unit{float:right; font-size:14px}
+.fix_table .down_btn{padding:0 33px 0 0; background:#fff}
+
+
+/* info_table */
+.info_table table{float:left; width:900px; border-top:2px solid #282828; border-bottom:1px solid #cecece}
+.info_table thead th{padding:25px 0; background-color:#f5f6f8; border-right:1px solid #cecece; font-weight:bold; font-size:18px; line-height:24px; color:#282828; }
+.info_table thead th:last-child{border-right:none}
+.info_table tbody th, .info_table tbody td{padding:23px 0; border-top:1px solid #cecece; border-right:1px solid #cecece; font-weight:400; font-size:16px; color:#1c1c1c; line-height:1; text-align:center}
+.info_table tbody td:last-child{border-right:none}
+.info_table tbody .table_total th, .info_table tbody .table_total td{background-color:rgba(255, 127, 0, 0.05); font-weight:bold}
+.info_table .table_etc{overflow:hidden; margin-bottom:10px}
+.info_table .table_caption{float:left; font-size:14px; color:#666}
+.info_table .table_caption::before{content:""; display:inline-block; width:3px; height:3px; margin-right:8px; background-color:#f60; vertical-align:middle}
+.info_table .table_unit{float:right; font-size:14px}
+.info_table .down_btn{padding:0 33px 0 0; background:#fff}
+
+/* scroll_wrap ico_scroll */
+.scroll_wrap{overflow-x:auto; position:relative; margin:30px 0}
+.scroll_wrap .ico_scroll{display:none}
+.scroll_wrap .ico_scroll.on{display:none;}
+
+
+/* 공시정보 */
+.fairdisclosure{width:100%; margin-top:60px}
+.fairdisclosure .notice_L p{float:left; display:inline-block; font-size:16px; line-height:32px; letter-spacing:-1px; text-align:left; color:#959595}
+.fairdisclosure .notice_R{float:right; display:inline-block; margin-top:-10px; border:1px solid #878889; border-radius:4px; }
+.fairdisclosure .notice_R button{padding:10px 30px; background:url('../images/icon/ico-link.png') no-repeat right top; color:#555555; font-size:16px; line-height:32px; text-align:center}
+
+.fairdisclosure_list dl.dl_tit{width:100%; margin-top:20px; padding:25px 0; box-sizing:border-box; color:#333; border-top:2px solid #282828; text-align:center}
+.fairdisclosure_list dt.dl_tit{display:inline-block; width:760px; line-height:normal; color:#282828; font-size:18px; font-weight:bold; letter-spacing:-1px; border:0px none}
+.fairdisclosure_list dd.dl_tit{display:inline-block; width:250px; line-height:32px; color:#555; font-size:18px; font-weight:bold; letter-spacing:-1px; border:0px none}
+
+.fairdisclosure_list{display:inline-block; width:1280px}
+.fairdisclosure_list dl{width:100%; padding:25px 0; box-sizing:border-box; color:#333; border-bottom:1px solid #cecece}
+.fairdisclosure_list dl:second-child{border-top:1px solid #cecece}
+.fairdisclosure_list dt{display:inline-block; width:760px; line-height:normal; color:#282828; font-size:18px; font-weight:bold; letter-spacing:-1px}
+.fairdisclosure_list dd{display:inline-block; width:250px; line-height:32px; color:#555; font-size:18px; font-weight:normal; letter-spacing:-1px; text-align:center}
+
+
+
+
+.stock_notice{clear:both; margin-top:15px}
+.stock_notice .desc_krx{float:left; line-height:20px}
+.stock_notice .img_krx{float:right}
+
+.noborderR{border-right:none !important}
+.noborderL{border-left:none !important}
+
+p.help	{margin-top:15px; padding-left:27px; background:url('../images/icon/icon_help.gif') no-repeat 0 0; color:#555; font-size:14px; line-height:20px}
+
+
+
+
+
+
+
+@media (max-width:1024px){
+	.invest{padding:0 16px; box-sizing:border-box}
+	.invest:after{content:""; display:block; clear:both}
+	.invest .btn_list{display:none}
+
+	/* 투자정보 상단 주식정보 섹션 */
+	#invest_stock{display:block; width:100%}
+	#invest_stock .top_info{display:block; width:98%; height:auto; margin:0 auto; border:0px none; box-sizing:border-box; text-align:center}
+	#invest_stock .top_info h2{display:inline-block; margin:35px auto 0 auto; color:#111; font-size:32px; font-weight:700; letter-spacing:-2px}
+	#invest_stock .top_info .subtit_desc{margin:10px 0 0; color:#555; font-size:16px; line-height:27px; letter-spacing:-1px}
+	#invest_stock .top_info .subtit_desc>span{display:block}
+	#invest_stock .stock_top_info{width:100%; min-width:98%; height:auto; margin:40px auto 0 auto; padding:30px 20px; background:#f5f6f8; box-sizing:border-box}
+	#invest_stock .stock_top_info .stock_info{width:100%; height:auto; margin:0 auto}
+	#invest_stock .stock_top_info .stock_info h2{display:block; font-size:20px; margin-bottom:40px; font-weight:bold; letter-spacing:-2px}
+	#invest_stock .stock_top_info .stock_info p.stock_notice{font-size:14px; line-height:32px; color:#555; text-align:center}
+	#invest_stock .stock_top_info .stock_info p.stock_notice i{font-style:normal}
+
+	#invest_stock .irInfo{display:inline-block; width:96%; margin-bottom:40px; text-align:center}
+	#invest_stock .irInfo .irinner{float:left; width:100%; height:180px; margin-right:0px; background:#fff; box-sizing:border-box}
+	#invest_stock .irInfo .irinner:after{content:""; display:block; clear:both}
+	#invest_stock .irInfo .irinner .js_number{margin:25px 0 20px 0; font-size:16px; line-height:2; color:#959595}
+	#invest_stock .irInfo .stock_present{float:none; margin:0 auto; padding-right:0px; text-align:center}
+	#invest_stock .irInfo .stock_present .present{padding-left:10px; font-family:'Noto Sans KR'; font-weight:900; font-size:46px; line-height:42px; color:#222; background:url('../images/ir/ico-stock-triangle-red.png') no-repeat 60px 12px}
+	#invest_stock .irInfo .stock_present .present p{}
+	#invest_stock .irInfo .stock_won{float:none; display:inline-block; margin:10px auto; font-family:'Noto Sans KR'; font-size:16px; line-height:26px; color:#555; vertical-align:baseline; text-align:left; border:1px solid red}
+	#invest_stock .irInfo .stock_won .won{font-size:18px; font-weight:bold}
+
+	#invest_stock .irInfo .changeD{float:left; display:inline-block; border-left:1px solid #ddd}
+	#invest_stock .irInfo .changeD span{display:block; margin:0 0 10px 30px; text-align:left}
+	#invest_stock .irInfo .changeD p{display:inline-block; font-family:'Noto Sans KR'; font-weight:300; font-size:16px; color:#555}
+	#invest_stock .irInfo .changeD p.stock_tit{width:90px}
+	#invest_stock .irInfo .changeD p.up{width:65px; font-weight:bold; color:#f80000; text-align:right}
+	#invest_stock .irInfo .changeD p.down{width:65px; font-weight:bold; color:#004ff0; text-align:right}
+
+	#invest_stock .irInfo .infoList{float:left; width:100%; height:180px; margin-top:50px; margin-left:0px; padding:0; background:#fff; box-sizing:border-box}
+	#invest_stock .irInfo .infoList .list{float:left; padding-bottom:30px; width:155px; background:#fff; border-right:1px solid #f0f0f2; box-sizing:border-box}
+	#invest_stock .irInfo .infoList .list:last-child{border-right:0px none}
+	#invest_stock .irInfo .infoList .list .tit{position:relative; padding:30px 0; font-family:'Noto Sans KR'; font-weight:700; font-size:16px; line-height:32px; color:#555; letter-spacing:-1px}
+	#invest_stock .irInfo .infoList .list:nth-child(5) .tit, #invest_stock .irInfo .infoList .list:nth-child(6) .tit{padding-bottom:0}
+	#invest_stock .irInfo .infoList .list:nth-child(n+6) .tit:after{display:none}
+	#invest_stock .irInfo .infoList .list:nth-child(5) .con, #invest_stock .irInfo .infoList .list:nth-child(6) .con{margin-top:55px}
+	#invest_stock .irInfo .infoList .list .tit:after{content:''; display:block; position:absolute; bottom:0; left:50%; margin-left:-10px; width:24px; height:2px; background:#f0f0f2}
+	#invest_stock .irInfo .infoList .list .tit span{color:#888}
+	#invest_stock .irInfo .infoList .list .con{margin-top:26px; font-family:'Noto Sans KR'; font-weight:900; font-size:28px; line-height:32px; color:#111; letter-spacing:-1px}
+	#invest_stock .irInfo .infoList .list .change{margin-top:20px; font-family:'Noto Sans KR'; font-weight:900; font-size:18px; line-height:13px}
+	#invest_stock .irInfo .infoList .list .change b{display:inline-block; margin-top:-1px; font-size:12px; vertical-align:top}
+	#invest_stock .irInfo .infoList .list .change.up{color:#ce0c47}
+	#invest_stock .irInfo .infoList .list .change.down{color:#00959c}
+
+
+	/*투자정보 table*/
+	.sect_inner{width:1200px; margin:0 auto}
+	.sect_inner + .sect_inner{margin-top:40px}
+	.sect_inner::after{display:block; content:""; clear:both}
+	.sect_top_txt{font-weight:600; font-size:30px; color:#1c1c1c; line-height:44px; text-align:center}
+	.sect_inner .table_tit h1{margin-bottom:30px; font-weight:bold; font-size:36px; letter-spacing:-1px; color:#111111}
+
+	/* table_wrap */
+	.table_wrap + .btn_wrap{margin-top:50px}
+	.table_wrap + .table_wrap{margin-top:60px}
+	.table_wrap .sect_tit{margin-bottom:20px}
+
+	/* fix_table */
+	.fix_table table{float:left; width:150px; border-top:2px solid #282828; border-bottom:1px solid #cecece}
+	.fix_table thead th{padding:25px 0; background-color:#f5f6f8; border-right:1px solid #cecece; font-weight:bold; font-size:12px; line-height:24px; color:#282828; }
+	.fix_table thead th:last-child{border-right:none}
+	.fix_table tbody th, .fix_table tbody td{padding:18px 0; border-top:1px solid #cecece; border-right:1px solid #cecece; font-weight:400; font-size:12px; color:#1c1c1c; line-height:1; text-align:center}
+	.fix_table tbody td:last-child{border-right:none}
+	.fix_table tbody .table_total th, .fix_table tbody .table_total td{background-color:rgba(255, 127, 0, 0.05); font-weight:bold}
+	.fix_table .table_etc{overflow:hidden; margin-bottom:10px}
+	.fix_table .table_caption{float:left; font-size:12px; color:#666}
+	.fix_table .table_caption::before{content:""; display:inline-block; width:3px; height:3px; margin-right:8px; background-color:#f60; vertical-align:middle}
+	.fix_table .table_unit{float:right; font-size:12px}
+	.fix_table .down_btn{padding:0 33px 0 0; background:#fff}
+
+
+	/* info_table */
+	.info_table table{float:left; width:300px; border-top:2px solid #282828; border-bottom:1px #cecece}
+	.info_table thead th{padding:25px 0; background-color:#f5f6f8; border-right:1px solid #cecece; border-bottom:1px solid #cecece; font-weight:bold; font-size:12px; line-height:24px; color:#282828}
+	.info_table thead th:last-child{border-right:none}
+	.info_table tbody th, .info_table tbody td{padding:18px 0; border-bottom:1px solid #cecece; border-right:1px solid #cecece; font-weight:400; font-size:12px; color:#1c1c1c; line-height:1; text-align:center}
+	.info_table tbody td:last-child{border-right:none}
+	.info_table tbody .table_total th, .info_table tbody .table_total td{background-color:rgba(255, 127, 0, 0.05); font-weight:bold}
+	.info_table_inner{overflow:hidden; margin:0}
+	.info_table_inner > div{float:left}
+	.info_table_inner .info_table_fixed{width:150px}
+	.info_table_inner .info_table_fixed thead th:last-child{border-right:1px solid #cecece}
+	.info_table_inner .info_table_scroll{overflow-x:auto; width:calc(100% - 150px); margin:0}
+	.info_table_inner .info_table_scroll tbody td{padding-right:15px; text-align:right}
+	.info_table .table_etc{overflow:hidden; margin-bottom:10px; font-size:12px; color:#666}
+	.info_table .table_caption{float:left}
+	.info_table .table_unit{float:right}
+
+
+	/* scroll_wrap ico_scroll */
+	.scroll_wrap{overflow-x:auto; position:relative; margin:30px 0}
+	.scroll_wrap .ico_scroll{display:none; position:absolute; right:0; top:30px; z-index:10; width:96px; height:48px; text-indent:-9999px; background:url("../images/common/ico_scroll.png") left top no-repeat; background-size:96px auto}
+	.scroll_wrap .ico_scroll.on{display:block}
+
+	/* scroll_slider */
+	.scroll_slider{overflow:hidden; position:relative}
+	.scroll_slider .swiper-pagination-progressbar{left:20px; top:auto; bottom:40px; width:calc(100% - 70px); background-color:rgba(102,102,102,0.2)}
+	.scroll_slider .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background-color:#f60}
+
+
+	.notice{clear:both; padding:0 10px; margin-top:15px; font-size:12px}
+	.notice .desc_krx{float:left; line-height:20px}
+	.notice .img_krx{float:right}
+
+	/* IR자료 */
+	.ir_wrap	{margin-top:30px; padding:0 15px; min-height:auto}
+	.ir_wrap h3	{margin:0 -15px; padding:0 15px; font-size:18px; font-weight:700; line-height:47px}
+
+
+	p.help	{position:relative; margin:0 15px; padding:14px 0 0 20px; font-size:10px; line-height:15px; border-top:1px solid #ccc; background:none}
+	p.help:after	{content:""; display:block; position:absolute; top:14px; left:0; width:15px; height:15px; background:url('../images/icon/icon_sp.png') no-repeat -175px 0; background-size:400px 400px}
+	
+	
+}

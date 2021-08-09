@@ -1,0 +1,225 @@
+@charset "utf-8"; 
+
+.download{}
+.download:after{content:""; display:block; clear:both}
+.download .btn_list{display:none}
+
+/* 스팸스나이퍼 리포트 */
+#sniper_report{position:relative; z-index:100; width:100%}
+#sniper_report .top_info{display:block; width:1280px; height:240px; margin:0 auto; text-align:center; opacity:0.9}
+#sniper_report .top_info h2{display:inline-block; margin:80px auto 0 auto; color:#111; font-size:3.000em; font-weight:700; letter-spacing:-2px}
+#sniper_report .top_info .subtit_desc{margin:20px 0 0; color:#555; font-size:1.125em; line-height:2.000em; letter-spacing:-1px}
+#sniper_report .top_info .subtit_desc>span{display:inline}
+
+#sniper_report .report_tab_menu {display:inline-block; width:100%; height:auto; margin:15px auto 60px auto; text-align:center}
+#sniper_report .report_tab_menu span {display:inline-block; border:1px solid #dadbde; border-radius:50px; background:#fff; box-sizing:border-box}
+#sniper_report .report_tab_menu span p {display:inline-block; float:left; width:200px; height:60px; margin:0 auto; padding:10px 0; font-weight:bold; font-size:18px; line-height:40px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+#sniper_report .report_tab_menu span p a {text-decoration:none}
+#sniper_report .report_tab_menu span p a:hover {cursor:pointer; color:#ff7f00; border-radius:50px; border:0px none}
+#sniper_report .report_tab_menu span p a>i{display:inline; font-style:normal}
+#sniper_report .report_tab_menu span p.menu_first {}
+#sniper_report .report_tab_menu span p.menu_on {background:#ff7f00; border-radius:50px; border:1px solid #ff7f00; box-sizing:border-box}
+#sniper_report .report_tab_menu span p.menu_on a{color:#fff}
+#sniper_report .report_tab_menu span p.menu_on a>i{display:inline; font-style:normal}
+#sniper_report .report_tab_menu .table_list_select {display:inline-block; width:200px; float:right; margin-top:8px; text-align:right}
+#sniper_report .report_tab_menu .table_list_select p {display:inline; font-size:12px}
+
+#sniper_report .report_area{width:100%; min-width:1280px; height:765px; margin:-92px auto 0 auto; padding:60px 0; background:#f5f6f8; box-sizing:border-box}
+#sniper_report .report_area .sniper_list_area{width:100%; max-width:1200px; margin:120px auto 0 auto}
+
+#sniper_report .sniper_thum{display:inline-block; width:400px; height:457px}
+#sniper_report .sniper_thum>span{display:inline-block; width:390px; height:390px; margin:0 auto; background-color:rgba(0, 0, 0, 0.04); border-radius:195px; text-align:center}
+#sniper_report .sniper_thum>span img{display:inline}
+
+#sniper_report .sniper_report_list{float:right; width:730px; height:auto; margin-left:50px; margin-top:20px; box-sizing:border-box}
+#sniper_report .sniper_report_list h2{float:left; width:70%; font-size:36px; font-weight:bold;  letter-spacing:-2px; color:#111111}
+#sniper_report .sniper_report_list .sniper_select{float:right; width:20%}
+#sniper_report .sniper_report_list .sniper_select select{min-width:145px; height:46px; padding:7px 15px; font-size:18px; box-sizing:border-box}
+
+#sniper_report .sniper_report_list .list_area{float:none; display:inline-block; width:100%; height:auto; margin-top:50px; box-sizing:border-box}
+#sniper_report .sniper_report_list .list_area .monthly{width:100%; height:auto}
+#sniper_report .sniper_report_list .list_area .quarterly{width:100%; height:auto; margin-top:70px}
+#sniper_report .sniper_report_list .list_area .quarterly h3{font-size:22px; font-weight:bold; color:#111; letter-spacing:-1px}
+
+#sniper_report .sniper_report_list .list_area dl{display:table; width:770px; margin-top:25px; margin-left:-40px; table-layout:fixed; box-sizing:border-box}
+#sniper_report .sniper_report_list .list_area dl:first-child{margin-top:30px}
+#sniper_report .sniper_report_list .list_area dd{display:table-cell; float:left; width:calc(100% / 4 - 40px); margin-left:40px; padding-bottom:12px; color:#333333; font-size:18px; font-weight:bold; letter-spacing:-1px; border-bottom:1px solid #dadbde; background:url('../images/icon/ico-download_2.png') no-repeat right 3px; box-sizing:border-box}
+/*#sniper_report .monthly dd:first-child{margin-left:0px}*/
+#sniper_report .sniper_report_list .list_area a dd{text-decoration:none}
+#sniper_report .sniper_report_list .list_area  a:hover dd {color:#ff7f00; border-bottom:1px solid #ff7f00; background:url('../images/icon/ico-download_2_on.png') no-repeat right 3px}
+#sniper_report .sniper_report_list .list_area a dd.diable{color:#bebebe; border-bottom:1px solid #bebebe; background:url('../images/icon/ico-download_2_off.png') no-repeat right 3px}
+
+
+/* 보안리포트 */
+.download_list{width:100%; margin-top:60px}
+.download_list .down_list_select{display:inline-block}
+.download_list .down_list_select select{min-width:145px; height:46px; padding:7px 15px; font-size:18px}
+
+.download_list .download_report dl{display:inline-block; margin-top:40px}
+.download_list .download_report dl:first-child{margin-top:30px}
+.download_list .download_report dd{position:relative; float:left; width:291px; height:402px; margin-left:38px; background:url('../images/download/secu_report/report_bg.png') no-repeat right top; box-sizing:border-box}
+.download_list .download_report dd:nth-child(4n+1){margin-left:0px}
+.download_list .download_report dd span{display:inline-block}
+.download_list .download_report dd span img{border:1px solid #cecece; box-sizing:border-box}
+.download_list .download_report dd ul{position:absolute; width:calc(100% - 6px); height:145px; padding:18px; background:#fff; border:1px solid #cecece; box-sizing:border-box; z-index:10000; top:60%; left:0}
+.download_list .download_report dd ul li{font-weight:bold; font-size:18px; line-height:26px; letter-spacing:-1px; word-break:keep-all}
+.download_list .download_report dd ul li.down_btn{position:absolute; top:60%}
+.download_list .download_report dd ul li.down_btn a{display:inline-block; padding:4px 10px 8px 10px; color:#555; background:#fff; border:1px solid #dadbde; border-radius:4px}
+.download_list .download_report dd ul li.down_btn a:hover{color:#fff; background:#ff7f00; border:1px solid #ff7f00}
+.download_list .download_report dd ul li.down_btn button{background:url('../images/icon/ico-download.png') no-repeat right 1px; padding-right:20px; font-weight:bold; font-size:14px; letter-spacing:-1px; color:#555 }
+.download_list .download_report dd ul li.down_btn a:hover button{background:url('../images/icon/ico-download_on.png') no-repeat right 1px; padding-right:20px; font-weight:bold; font-size:14px; letter-spacing:-1px; color:#fff}
+.download_list .download_report dd ul li.report_m{display:none}
+
+
+/* 탭메뉴 2개일때 */
+.report_tab_menu2 {display:inline-block; width:100%; height:auto; margin:15px auto 60px auto; text-align:center}
+.report_tab_menu2 span {display:inline-block; border:1px solid #dadbde; border-radius:50px; background:#fff; box-sizing:border-box}
+.report_tab_menu2 span p {display:inline-block; float:left; width:200px; height:60px; margin:0 auto; padding:10px 0; font-weight:bold; font-size:18px; line-height:40px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+.report_tab_menu2 span p a {text-decoration:none}
+.report_tab_menu2 span p a:hover {cursor:pointer; color:#ff7f00; border-radius:50px; border:0px none}
+.report_tab_menu2 span p a>i{display:inline; font-style:normal}
+.report_tab_menu2 span p.menu_first {}
+.report_tab_menu2 span p.menu_on {background:#ff7f00; border-radius:50px; border:1px solid #ff7f00; box-sizing:border-box}
+.report_tab_menu2 span p.menu_on a{color:#fff}
+.report_tab_menu2 span p.menu_on a>i{display:inline; font-style:normal}
+
+
+
+
+
+@media (max-width:1024px){
+
+	/* 리포트 다운로드 */
+    .download{padding:0 16px; box-sizing:border-box}
+	.download:after{content:""; display:block; clear:both; margin:0 auto}
+	.download .btn_list{display:none}
+
+	
+	/* 스팸스나이퍼 리포트 */
+	#sniper_report{width:90%; max-width:670px; margin:0 auto; padding:0 16px}
+	#sniper_report .top_info{display:block; width:100%; height:190px; margin:0 auto; padding:0 16px; text-align:center; opacity:0.9; box-sizing:border-box}
+	#sniper_report .top_info h2{display:inline-block; margin:35px auto 0 auto; color:#111; font-size:2.125em; font-weight:700; letter-spacing:-1px}
+	#sniper_report .top_info .subtit_desc{margin:20px 0 0; color:#555; font-size:1.000em; line-height:1.625em; letter-spacing:-1.5px}
+	#sniper_report .top_info .subtit_desc>span{display:block}	
+	
+	#sniper_report .report_tab_menu {display:inline-block; width:100%; height:auto; margin:15px auto 0 auto; text-align:center}
+	#sniper_report .report_tab_menu span {display:inline-block; width:100%; max-width:670px; border:1px solid #b2b2b2; border-radius:0px; background:#fff; box-sizing:border-box}
+	#sniper_report .report_tab_menu span p {display:inline-block; float:left; width:50%; height:50px; margin:0 auto; padding:10px; font-weight:bold; font-size:13px; line-height:27px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+	#sniper_report .report_tab_menu span p a{text-decoration:none}	
+	#sniper_report .report_tab_menu span p a:hover {cursor:pointer; color:#ff7f00; border-radius:0px; border:0px none}
+	#sniper_report .report_tab_menu span p a>i{display:inline; font-style:normal}
+	#sniper_report .report_tab_menu span p.menu_first {}
+	#sniper_report .report_tab_menu span p.menu_on {background:#ff7f00; border-radius:0px; border:1px solid #ff7f00}
+	#sniper_report .report_tab_menu span p.menu_on a{color:#fff}
+	#sniper_report .report_tab_menu span p.menu_on a>i{display:inline; font-style:normal}	
+	#sniper_report .report_tab_menu .table_list_select {display:inline-block; width:200px; float:right; margin-top:8px; text-align:right}
+	#sniper_report .report_tab_menu .table_list_select p {display:inline; font-size:12px}	
+	
+	#sniper_report .report_area{width:98%; min-width:300px; height:765px; margin:0 auto; padding:0px; background:none; box-sizing:border-box}
+	#sniper_report .report_area .sniper_list_area{width:100%; max-width:670px; margin:30px auto 0 auto; text-align:center}
+
+	#sniper_report .sniper_thum{display:block; width:100%; height:auto}
+	#sniper_report .sniper_thum>span{display:inline-block; width:300px; height:300px; margin:0 auto; background-color:rgba(0, 0, 0, 0.04); border-radius:150px; text-align:center}
+	#sniper_report .sniper_thum>span img{display:inline; width:70%; height:auto}
+
+	#sniper_report .sniper_report_list{display:block; float:left; width:100%; height:auto; margin-left:0px; margin-top:50px; box-sizing:border-box}
+	#sniper_report .sniper_report_list h2{float:left; width:50%; font-size:18px; font-weight:bold; letter-spacing:-2px; color:#111111; text-align:left; line-height:36px}
+	#sniper_report .sniper_report_list .sniper_select{float:right; width:auto}
+	#sniper_report .sniper_report_list .sniper_select select{min-width:100px; height:35px; padding:7px 10px; font-size:14px; box-sizing:border-box}
+
+	#sniper_report .sniper_report_list .list_area{float:none; display:block; width:100%; height:auto; margin-top:0px; box-sizing:border-box}
+	#sniper_report .sniper_report_list .list_area .monthly{width:100%; height:auto}
+	#sniper_report .sniper_report_list .list_area .quarterly{width:100%; height:auto; margin:70px 0}
+	#sniper_report .sniper_report_list .list_area .quarterly h3{font-size:18px; font-weight:bold; color:#111; letter-spacing:-1px; text-align:left}
+
+	#sniper_report .sniper_report_list .list_area dl{display:inline-block; width:100%; margin-top:15px; margin-left:-30px; table-layout:fixed; box-sizing:border-box}
+	#sniper_report .sniper_report_list .list_area dl:first-child{margin-top:20px}
+	#sniper_report .sniper_report_list .list_area dd{float:left; width:calc(100% / 2 - 30px); margin:20px 0 0 30px; padding-bottom:12px; color:#333333; font-size:14px; font-weight:bold; letter-spacing:-1px; text-align:left; border-bottom:1px solid #dadbde; background:url('../images/icon/ico-download_2.png') no-repeat right 3px; box-sizing:border-box}
+	/*#sniper_report .monthly dd:first-child{margin-left:0px}*/
+	#sniper_report .sniper_report_list .list_area a dd{text-decoration:none}
+	#sniper_report .sniper_report_list .list_area  a:hover dd {color:#ff7f00; border-bottom:1px solid #ff7f00; background:url('../images/icon/ico-download_2_on.png') no-repeat right 3px}
+	#sniper_report .sniper_report_list .list_area a dd.diable{color:#bebebe; border-bottom:1px solid #bebebe; background:url('../images/icon/ico-download_2_off.png') no-repeat right 3px}
+
+
+	/* 보안리포트 */
+	.download_list{width:100%; max-width:670px; margin:30px auto 0 auto}
+	.download_list .down_list_select{display:inline-block}
+	.download_list .down_list_select select{min-width:100px; height:35px; padding:7px 10px; font-size:14px}
+
+	.download_list .download_report{display:inline-block}
+	.download_list .download_report dl{display:inline-block; width:100%; margin:40px auto 0 auto; text-align:center}
+	.download_list .download_report dl:first-child{margin-top:30px}
+	.download_list .download_report dd{position:relative; float:left; width:325px; height:228px; margin-left:0px; margin-bottom:20px; background:url('../images/download/secu_report/report_bg_m.png') no-repeat right top; text-align:left; box-sizing:border-box}
+	.download_list .download_report dd:nth-child(4n+1){margin-left:0px}
+	.download_list .download_report dd:last-child{margin-bottom:0px}
+	.download_list .download_report dd:nth-child(even){margin-left:20px}
+	.download_list .download_report dd span{display:inline-block}
+	.download_list .download_report dd span img{width:160px; border:1px solid #cecece; box-sizing:border-box}
+	.download_list .download_report dd ul{position:absolute; width:160px; height:226px; padding:8px; background:#fff; border:1px solid #cecece; box-sizing:border-box; z-index:10000; top:0; left:49%}
+	.download_list .download_report dd ul li{font-weight:bold; font-size:16px; line-height:22px; letter-spacing:-1px; word-break:keep-all}
+	.download_list .download_report dd ul li.report_m{display:inline-block; margin:15px 0 10px 0; padding-top:10px; font-weight:bold; font-size:13px; color:#ff7f00; background:url('../images/download/secu_report/icon_report_m.png') no-repeat left 1px}
+	.download_list .download_report dd ul li.down_btn{position:absolute; top:75%}
+	.download_list .download_report dd ul li.down_btn a{display:inline-block; padding:4px 10px 8px 10px; color:#555; background:#fff; border:1px solid #dadbde; border-radius:4px}
+	.download_list .download_report dd ul li.down_btn a:hover{color:#fff; background:#ff7f00; border:1px solid #ff7f00}
+	.download_list .download_report dd ul li.down_btn button{background:url('../images/icon/ico-download.png') no-repeat right 1px; padding-right:20px; font-weight:bold; font-size:14px; letter-spacing:-1px; color:#555 }
+	.download_list .download_report dd ul li.down_btn a:hover button{background:url('../images/icon/ico-download_on.png') no-repeat right 1px; padding-right:20px; font-weight:bold; font-size:14px; letter-spacing:-1px; color:#fff}
+
+
+	/* 탭메뉴 2개일때 */
+	.report_tab_menu2 {display:inline-block; width:100%; height:auto; margin:15px auto 0 auto; text-align:center}
+	.report_tab_menu2 span {display:inline-block; width:100%; max-width:670px; border:1px solid #b2b2b2; border-radius:0px; background:#fff; box-sizing:border-box}
+	.report_tab_menu2 span p {display:inline-block; float:left; width:50%; height:50px; margin:0 auto; padding:10px; font-weight:bold; font-size:13px; line-height:27px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+	.report_tab_menu2 span p a{text-decoration:none}	
+	.report_tab_menu2 span p a:hover {cursor:pointer; color:#ff7f00; border-radius:0px; border:0px none}
+	.report_tab_menu2 span p a>i{display:inline; font-style:normal}
+	.report_tab_menu2 span p.menu_first {}
+	.report_tab_menu2 span p.menu_on {background:#ff7f00; border-radius:0px; border:1px solid #ff7f00}
+	.report_tab_menu2 span p.menu_on a{color:#fff}
+	.report_tab_menu2 span p.menu_on a>i{display:inline; font-style:normal}		
+
+
+
+}
+
+
+@media (max-width:560px){
+	/* 다운로드 */
+	.download_list{width:100%; margin:30px auto 0 auto; text-align:center}
+	.download_list .down_list_select{display:inline-block; float:left; margin-left:11px}
+	.download_list .down_list_select select{min-width:100px; height:35px; padding:7px 10px; font-size:14px}
+
+	.download_list .download_report{display:inline-block}
+	.download_list .download_report dl{display:inline-block; width:325px; margin:40px auto 0 auto; text-align:center}
+	.download_list .download_report dl:first-child{margin-top:30px}
+	.download_list .download_report dd{position:relative; float:left; width:325px; height:228px; margin-left:0px; margin-bottom:20px; background:url('../images/download/secu_report/report_bg_m.png') no-repeat right top; text-align:left; box-sizing:border-box}
+	.download_list .download_report dd:nth-child(4n+1){margin-left:0px}
+	.download_list .download_report dd:last-child{margin-bottom:0px}
+	.download_list .download_report dd:nth-child(even){margin-left:0px}
+	
+	/* 탭메뉴 */
+	#sniper_report .report_tab_menu {display:inline-block; width:100%; height:auto; margin:15px auto 0 auto}
+	#sniper_report .report_tab_menu span {display:inline-block; width:100%; border:1px solid #b2b2b2; border-radius:0px; box-sizing:border-box}
+	#sniper_report .report_tab_menu span p {display:inline-block; float:left; width:50%; height:50px; margin:0 auto; padding:10px; font-weight:bold; font-size:13px; line-height:28px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+	#sniper_report .report_tab_menu span p a{text-decoration:none}	
+	#sniper_report .report_tab_menu span p a:hover {cursor:pointer; color:#ff7f00; border-radius:0px; border:0px none}
+	#sniper_report .report_tab_menu span p a>i{display:inline; font-style:normal}
+	#sniper_report .report_tab_menu span p.menu_first {}
+	#sniper_report .report_tab_menu span p.menu_on {background:#ff7f00; border-radius:0px; border:1px solid #ff7f00; line-height:26px}
+	#sniper_report .report_tab_menu span p.menu_on a{color:#fff}
+	#sniper_report .report_tab_menu span p.menu_on a>i{display:inline; font-style:normal}	
+	#sniper_report .report_tab_menu .table_list_select {display:inline-block; width:200px; float:right; margin-top:8px; text-align:right}
+	#sniper_report .report_tab_menu .table_list_select p {display:inline; font-size:12px}
+	#sniper_report .report_tab_menu .ir{margin-top:135px !important}
+	
+	/* 탭메뉴 2개일때 */
+	.report_tab_menu2 {display:inline-block; width:100%; height:auto; margin:15px auto 0 auto}
+	.report_tab_menu2 span {display:inline-block; width:100%; border:1px solid #b2b2b2; border-radius:0px; box-sizing:border-box}
+	.report_tab_menu2 span p {display:inline-block; float:left; width:50%; height:50px; margin:0 auto; padding:10px; font-weight:bold; font-size:13px; line-height:28px; text-align:center; letter-spacing:-1px; word-break:keep-all; box-sizing:border-box}
+	.report_tab_menu2 span p a{text-decoration:none}	
+	.report_tab_menu2 span p a:hover {cursor:pointer; color:#ff7f00; border-radius:0px; border:0px none}
+	.report_tab_menu2 span p a>i{display:inline; font-style:normal}
+	.report_tab_menu2 span p.menu_first {}
+	.report_tab_menu2 span p.menu_on {background:#ff7f00; border-radius:0px; border:1px solid #ff7f00; line-height:26px}
+	.report_tab_menu2 span p.menu_on a{color:#fff}
+	.report_tab_menu2 span p.menu_on a>i{display:inline; font-style:normal}	
+}

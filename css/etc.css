@@ -1,0 +1,116 @@
+@charset "utf-8"; 
+
+/* 검색결과*/
+.etc_search_wrap	{margin-top:46px}
+.etc_search_wrap:after	{content:""; display:block; clear:both}
+.etc_search_wrap h3	{margin-top:40px; font-size:25px; font-weight:700; line-height:30px}
+.etc_search_wrap h4	{font-size:20px; font-weight:700; line-height:30px}
+.etc_search_wrap .fl_left	{width:590px; margin-bottom:20px; padding-right:10px; /*background:url('../images/ir/bg_cont_dotline.gif') repeat-y right 0*/}
+.etc_search_wrap .fl_right	{width:590px; margin-bottom:20px; padding-left:10px}
+
+.etc_search_wrap .search_cont	{}
+.etc_search_wrap .search_cont .btn_list	{display:none}
+
+.etc_search_wrap .search_box {background:url('../images/etc/search_box_bg.gif') repeat; border:1px solid #cccccc; padding:40px 0; text-align:center}
+.etc_search_wrap .search_box input {margin:auto; padding:10px 5px; font-size:16px; color:#333; font-weight:bold;}
+.etc_search_wrap .search_box .btn {display:inline; margin-left:5px;}
+
+.etc_search_wrap .search_list {margin-top:50px;}
+.etc_search_wrap .search_list .desc {font-size:20px; color:#333; margin-bottom:20px;}
+.etc_search_wrap .search_list .desc span {font-weight:bold; color:#f08200;}
+.etc_search_wrap .search_list dl {margin-top:10px; border:1px solid #ccc; line-height:20px; padding:30px;}
+.etc_search_wrap .search_list dl .title {font-size:20px; color:#333;}
+.etc_search_wrap .search_list dl .title span {font-weight:bold;}
+.etc_search_wrap .search_list dl dt {color:#f08200; text-decoration:underline; font-size:13px; margin-top:10px}
+.etc_search_wrap .search_list dl dd {font-size:15px; margin-top:10px;}
+
+
+/* 에러페이지 */
+
+.etc_error_wrap	{margin-top:200px}
+.etc_error_wrap:after	{content:""; display:block; clear:both}
+
+.etc_error_wrap .error_cont	{}
+.etc_error_wrap .error_cont .btn_list	{display:none}
+
+.etc_error_wrap .error_list {margin-top:50px; margin:0 auto; text-align:center}
+.etc_error_wrap .error_list .desc {font-size:30px; font-weight:bold; color:#333; margin:20px 0;}
+.etc_error_wrap .error_list .desc_s {font-size:20px; color:#555;}
+
+
+p.help	{margin-top:15px; padding-left:27px; background:url('../images/icon/icon_help.gif') no-repeat 0 0; color:#555; font-size:14px; line-height:20px}
+
+
+
+
+
+@media screen and (max-width:740px){
+/* 검색결과*/	.etc_search_wrap	{margin-top:30px; padding:0 15px}
+	.etc_search_wrap h3	{margin:0 -15px; padding:0 15px; font-size:18px; font-weight:700; line-height:47px}
+
+	.etc_search_wrap .fl_left	{float:none; width:auto; padding:0; background:none; margin-bottom:0}
+	.etc_search_wrap .fl_right	{float:none; width:auto; padding:0; margin-bottom:0}
+
+	.etc_search_wrap .search_cont	{overflow:hidden; position:relative; margin:0; padding:0 /*15px*/; height:auto; -webkit-transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000); -moz-transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000); -ms-transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000); -o-transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000); transition: all 0.3s cubic-bezier(0.770, 0.000, 0.175, 1.000)}
+	.etc_search_wrap .search_cont .btn_list	{display:block; position:absolute; top:0; right:0; width:48px; height:48px}
+	.etc_search_wrap .search_cont .btn_list:after	{content:""; display:block; position:absolute; top:50%; left:50%; margin:-5px 0 0 -7px; width:14px; height:9px; background:url('../images/icon/icon_sp.png') no-repeat -105px -17px; background-size:400px 400px}
+	.etc_search_wrap .search_cont.on .btn_list:after	{background-position:-105px -8px}
+
+	.etc_search_wrap .search_cont h3	{border-top:0}
+	.etc_search_wrap .search_cont.on	{height:auto; max-height:1000px}
+	.etc_search_wrap .search_cont.on h3	{border-bottom:1px solid #ccc}
+	.etc_search_wrap h4	{font-size:20px; font-weight:700; line-height:20px}
+	.etc_search_wrap .fl_right .search_cont:last-child.on	{border-bottom:0}
+
+	.etc_search_wrap .fl_left .search_cont:first-child h3	{margin-top:0}
+	.etc_search_wrap .fl_right .search_cont:first-child h3	{margin-top:0}
+	
+	.etc_search_wrap .search_box {background:url('../images/etc/search_box_bg.gif') repeat; border:1px solid #cccccc; padding:20px 10px; text-align:center}
+	.etc_search_wrap .search_box input {margin:auto; padding:10px 5px; font-size:14px; color:#333; font-weight:bold; width:70% !important;}
+	.etc_search_wrap .search_box .btn {display:inline; margin-left:5px;}
+	
+	.etc_search_wrap .search_list {margin-top:50px;}
+	.etc_search_wrap .search_list .desc {font-size:16px; color:#333; margin-bottom:20px; line-height:24px;}
+	.etc_search_wrap .search_list .desc span {font-weight:bold; color:#f08200;}
+	.etc_search_wrap .search_list dl {margin-top:6px; border:1px solid #ccc; line-height:22px; padding:15px;}
+	.etc_search_wrap .search_list dl .title {font-size:16px; color:#333;}
+	.etc_search_wrap .search_list dl .title span {font-weight:bold;}
+	.etc_search_wrap .search_list dl dt {color:#f08200; text-decoration:underline; font-size:12px; margin-top:6px}
+	.etc_search_wrap .search_list dl dd {font-size:14px; margin-top:10px;}
+	
+
+	.etc_search_wrap .stock_info	{margin-top:10px; margin-bottom:10px}
+	.etc_search_wrap .stock_info dl	{border:0}
+	.etc_search_wrap .stock_info dl:after	{content:""; display:block; clear:both}
+	.etc_search_wrap .stock_info dl dt	{float:none; margin-top:12px; border:0; background:#fff; font-weight:bold; font-size:35px}
+	.etc_search_wrap .stock_info dl dt.stock {float:left;margin-left:-80px}
+	.etc_search_wrap .stock_info dl dt span.up {color:#e90a0a;  background:url('../images/ir/icon_up02.png') no-repeat 0 17px; padding-left:25px}
+	.etc_search_wrap .stock_info dl dt.down {color:#3a6fc7; background:url('../images/ir/icon_down02.png') no-repeat 0 19px; margin-left:10px; padding-left:10px; padding-right:15px}
+	.etc_search_wrap .stock_info dl dt.unchanged {color:#555; background:url('../images/ir/icon_unchanged03.png') no-repeat 0 19px; margin-left:10px; padding-left:10px; padding-right:15px}
+
+	.etc_search_wrap .stock_info dl dd	{clear:both; float:left; padding:0; width:auto; border:0;  font-size:13px; margin-top:5px}
+	.etc_search_wrap .stock_info dl dd span {float:none}
+	.etc_search_wrap .stock_info dl dd span.up {color:#e90a0a; background:url('../images/ir/icon_up03.png') no-repeat 10px 3px; padding-left:25px}
+	.etc_search_wrap .stock_info dl dd span.down {color:#3a6fc7; background:url('../images/ir/icon_down03.png') no-repeat 10px 3px; padding-left:25px}
+	.etc_search_wrap .stock_info dl dd span.plus {color:#e90a0a; background:url('../images/ir/icon_plus.png') no-repeat 10px 4px; padding-left:23px}
+	.etc_search_wrap .stock_info dl dd span.minus {color:#3a6fc7; background:url('../images/ir/icon_minus.png') no-repeat 10px 5px; padding-left:23px}
+	.etc_search_wrap .stock_info dl dd span.unchanged {color:#555; background:url('../images/ir/icon_unchanged03.png') no-repeat 10px 5px; padding-left:23px}
+	
+	
+		/* 에러페이지 */
+	
+	.etc_error_wrap	{margin-top:200px}
+	.etc_error_wrap:after	{content:""; display:block; clear:both}
+	
+	.etc_error_wrap .error_cont	{}
+	.etc_error_wrap .error_cont .btn_list	{display:none}
+	
+	.etc_error_wrap .error_list {margin-top:50px; margin:0 auto; text-align:center; line-height:26px;}
+	.etc_error_wrap .error_list .desc {font-size:22px; font-weight:bold; color:#333; margin:20px 0 10px 0;}
+	.etc_error_wrap .error_list .desc_s {font-size:14px; color:#555;}
+
+	.noborderR {border-right:none}
+	.noborderL {border-left:none}
+
+	
+}

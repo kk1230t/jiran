@@ -1,0 +1,13 @@
+@charset "utf-8";
+/************************************************************************
+ * 파일명	: ie8.css
+ * 설명		: ie8 대응 CSS
+ * 작성일	: 2016.05.16
+************************************************************************/
+
+/* Topic */
+.topic_wrap .topic_list ul li a .thumb .ov	{display:none}
+
+.topic_wrap .check_list .chk	{position:relative;}
+.topic_wrap .check_list .chk label	{position:relative; background:none; padding-left:23px; line-height:30px}
+.topic_wrap .check_list input[type=checkbox]	{visibility:visible; position:absolute; top:7px; left:0; width:16px; height:16px;}
