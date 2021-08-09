@@ -740,7 +740,7 @@
                 .box{
                     margin: 0 -5px;
                     .lists{
-                        min-width: 290px;
+                        width: 290px;
                         padding: 0 5px;
                         > div{
                             border: 1px solid #f0f0f2;
@@ -844,3 +844,4 @@
         }
     }
 }
+

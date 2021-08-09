@@ -1613,6 +1613,7 @@
             _.currentImgLoaded(_.mediaInfo);
             _.initLibray();
             _.fullScreenEl = {};
+            
 			
 
 
@@ -1646,9 +1647,12 @@
 			win.on('changeSize', function(e, mode){
 				_.mediaInfo = mode;
 				_.currentImgLoaded(mode);
+                console.log(_.mediaInfo)
+                _.initSlider()
 			});
 			win.on('load', function(e){
-				_.initLibray();				
+				_.initLibray();
+                _.initSlider()
             })
 
 
@@ -1707,6 +1711,7 @@
                 }
 
 			});
+
         },
 
 		initLibray : function(){
@@ -1725,6 +1730,21 @@
 
             
             return _;
+        },
+        initSlider : function(mode){
+            var _ = this;
+            var swiper;
+            if(_.mediaInfo == 'mobile'){
+                swiper = new Swiper("#box_slider", {
+                    slidesPerView: "auto",
+                    spaceBetween: 10
+                });
+                $("#box_slider").data('swiper', swiper)
+            }else{   
+                if($("#box_slider").data('swiper')){
+                    $("#box_slider").data('swiper').destroy()
+                }
+            }
         },
         initLibrary : function(){
 			var _ = this;

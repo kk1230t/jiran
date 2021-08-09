@@ -587,7 +587,7 @@
         .prd_scroll_spy .prd_sec .prd_use .box {
           margin: 0 -5px; }
           .prd_scroll_spy .prd_sec .prd_use .box .lists {
-            min-width: 290px;
+            width: 290px;
             padding: 0 5px; }
             .prd_scroll_spy .prd_sec .prd_use .box .lists > div {
               border: 1px solid #f0f0f2;
