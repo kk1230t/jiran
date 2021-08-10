@@ -1,0 +1,192 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page09' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='엔터프라이즈 모바일 통합 솔루션', 
+            title2='모바일키퍼', 
+            img='img_product_mobilekeeper_visual', 
+            decs='기업 모바일 서비스 운영에 요구되는 다양한 모바일 <br>보안 및 관리를 위한 EMM 솔루션', 
+            type1=true, 
+            type2=true, 
+            type3=true, 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '레퍼런스', '이용방법'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='모바일 보안의 모든것, <em>모바일키퍼</em>',
+                        decs='<em>모바일키퍼(MobileKeeper)</em>는 법인 및 개인 단말 관리, 앱 보안, 출입통제를 포함한 <em>기업의 모든 모빌리티를 통합 관리하는 EMM<i>*</i> 솔루션</em>으로 <br>모바일에 대한 관리 및 보안과 업무 생산성 향상까지 책임지는 모바일 통합 플랫폼을 제공합니다. 공공/금융/국방 보안감사를 통과한 국가 공인 솔루션으로 <br>100만 이상의 유저, 200개 이상의 고객사 구축 경험으로 국내 1위 레퍼런스를 보유하고 있습니다. 모바일키퍼는 국내 기업에 최적화된 모바일 출입통제, <br>모바일 오피스 보안, 모바일 단말 관리 서비스로 모빌리티관리와 업무생산성 두가지를 모두  만족하는 모바일 경험을 제공합니다.', 
+                        img='img_product_sanitox_intro', 
+                        sub_decs='<i>*</i>EMM(Enterprise Mobility Management) : 엔터프라이즈 모빌리티 관리',
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>모바일키퍼</em>가 특별한 이유", 
+                        decs="모바일키퍼는 공공·금융기관의 컴플라이언스를 충족하고 국내 최다 구축사례 및 MDM 분야 기술평가 최다 1위로 기술력과 안정성을 검증받았습니다. <br>국내 최다 100만 유저 이상의 구축 운영 노하우를 바탕으로 기업의 보안 규정을 준수하는 효과적인 보안과 성공적인 변화관리로 사용자의 스마트폰 사용권을 동시 충족합니다. <br>모바일보안 전담 사업수행팀이 제공하는 전문 컨설팅을 통해 안전하고 편리한 모바일 서비스 환경을 구축하실 수 있습니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_sanitox_benefits_01",
+                                title : "시장 점유율 1위",
+                                decs : "100만 유저이상, 200개 이상 <br>고객사 구축 운영"
+                            },
+                            {
+                                img : "img_product_sanitox_benefits_02",
+                                title : "전담 기술 인력 보유",
+                                decs : "5년 이상 MDM 전담 <br>기술인력 비율 84%"
+                            },
+                            {
+                                img : "img_product_sanitox_benefits_03",
+                                title : "모바일 전문 컨설팅",
+                                decs : "최다 구축 Know-How <br>운영/규제 컨설팅"
+                            },
+                            {
+                                img : "img_product_sanitox_benefits_04",
+                                title : "검증된 솔루션",
+                                decs : "다수 인증/특허 및 <br>산업군별 보안감사 통과"
+                            }
+                        ], 
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>모바일키퍼</em>로 누리는 안전한 모바일 생활',
+                        decs='모바일키퍼는 기업 모빌리티 관리에 필요한 모바일 단말 관리(MDM: Mobile Device Management), 앱 보안 관리(MAM: Mobile Application Management), <br>모바일 출입통제(MDAC: Mobile Decice Access Control), 콘텐츠 보안 관리(MCM: Mobile Contents Management) 등을 통합 제공합니다. <br>MDM 플랫폼을 기반으로 개별 도입/운영이 가능한 모듈로 기업의 모바일 서비스 운영 정책에 맞춘 최적화된 구성으로 도입해 보시기 바랍니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_sanitox_features_01",
+                                title : "강력한 자체 CDR 엔진",
+                                decs : "실시간 무해화 및 원본 파일 재조합으로<br>안전한 파일 제공"
+                            },
+                            {
+                                img : "img_product_sanitox_features_02",
+                                title : "최적화 운영 관리",
+                                decs : "백신 및 CDR 엔진 업데이트<br>상시 최적화 유지"
+                            },
+                            {
+                                img : "img_product_sanitox_features_03",
+                                title : "유연한 정책 관리",
+                                decs : "차단/예외 등 다양한 정책관리<br>기능 지원"
+                            },
+                            {
+                                img : "img_product_sanitox_features_04",
+                                title : "다양한 포맷 무해화",
+                                decs : "MS Office, 한글(HWP), PDF,<br>ZIP, Image 포맷 등 "
+                            },
+                            {
+                                img : "img_product_sanitox_features_05",
+                                title : "제품 확장성 지원",
+                                decs : "eMail G/W, API, SFTP, SMB, NFS 등<br>다양한 연계 및 확장성 지원"
+                            },
+                            {
+                                img : "img_product_sanitox_features_06",
+                                title : "직관적 통계 리포트",
+                                decs : "로그 및 통계 분석 리포트 제공으로<br>위협 유형 분석"
+                            },
+                            {
+                                img : "img_product_sanitox_features_07",
+                                title : "고객 니즈 최적화",
+                                decs : "고객 규모에 맞는 어플라이언스<br>/에이전트 형태로 지원"
+                            },
+                            {
+                                img : "img_product_sanitox_features_08",
+                                title : "고효율 저비용",
+                                decs : "솔루션 확장성 대비<br>높은 가격 경쟁력"
+                            }
+                        ], 
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+
+                {{
+                    fn.cont_reference(
+                        title='<em>모바일키퍼</em> 도입 기업들', 
+                        decs='모바일키퍼를 도입한 기업들은 문서 속 악성 위협들을 무해화하여 안전한 문서 생활을 누리시고 계십니다.', 
+                        imgs=[
+                            "img_product_sanitox_reference_01_01_m",
+                            "img_product_sanitox_reference_01_02_m",
+                            "img_product_sanitox_reference_01_03_m",
+                            "img_product_sanitox_reference_01_04_m",
+                            "img_product_sanitox_reference_01_05_m",
+                            "img_product_sanitox_reference_01_06_m",
+                            "img_product_sanitox_reference_02_01_m",
+                            "img_product_sanitox_reference_02_02_m",
+                            "img_product_sanitox_reference_02_03_m",
+                            "img_product_sanitox_reference_02_04_m",
+                            "img_product_sanitox_reference_02_05_m",
+                            "img_product_sanitox_reference_02_06_m",
+                            "img_product_sanitox_reference_03_01_m",
+                            "img_product_sanitox_reference_03_02_m",
+                            "img_product_sanitox_reference_03_03_m",
+                            "img_product_sanitox_reference_03_04_m",
+                            "img_product_sanitox_reference_03_05_m",
+                            "img_product_sanitox_reference_03_06_m"
+                        ], 
+                        id='cont4', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_use(
+                        title='똑똑한 <em>모바일키퍼</em> 이용법', 
+                        decs='모바일키퍼를 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        list_decs=[
+                            {
+                                title:'모바일키퍼 어플라이언스',
+                                decs : '별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 단일 장비에서 웹 서버, 파일 서버(SFTP, NFS), 메일 서버(MTA), 웹API 등 다양한 시스템 연동을 지원하므로 높은 확장성을 경험하실 수 있습니다.'
+                            },
+                            {
+                                title:'모바일키퍼 클라우드',
+                                decs : '모바일키퍼 EP(Endpoint Platform)는 메일, 웹, 파일서버 등 시스템 연동없이 무해화를 실행하는 모바일키퍼의 클라우드 버전입니다.  IT 전문운영 인력이 부족한 소호·중소기업에서도 손쉽게 사용하실 수 있습니다.'
+                            },
+                            {
+                                title:'모바일키퍼 SDK',
+                                decs : '모바일키퍼 CDR 엔진을 자체 소프트웨어/하드웨어의 제품 또는 서비스에 통합할 수 있도록 API를 제공합니다. 소프트웨어 개발사 및 서비스 제공 기업이라면 원하는 어느곳에든 적용하실 수 있습니다.'
+                            }
+                        ], 
+                        id='cont5', 
+                        class=''
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="모바일키퍼가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6989', 
+                        mail='sanitox@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    
