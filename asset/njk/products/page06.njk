@@ -1,0 +1,166 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page06' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='지능형 검색 기반 이메일 아카이빙', 
+            title2='제이볼트 플러스', 
+            img='img_product_jvault_visual', 
+            decs='이메일 관리 효율성 제고와 법규 대응이 가능한 사용자 중심 <br>지능형 이메일 아카이빙 솔루션', 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '레퍼런스'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='쌓여가는 이메일 관리, <em>제이볼트 플러스</em>', 
+                        decs='<em>제이볼트 플러스(Jvault+)</em>는 사용자 중심의 지능형 검색을 통해 이메일의 손쉬운 저장, 백업, 복구 기능으로 기업의 컴플라이언스를 효과적으로 대응할 수 있는 <br><em>이메일 아카이빙 솔루션</em>입니다. 제이볼트 플러스는 정책 별 다양한 아카이빙 기능을 설정하여 방대하게 쌓이는 메일의 중복 저장을 제거하고 최대 60%까지 용량을 압축 보관합니다. <br>아웃룩과 스토리지(SAN, NAS, DAS)의 확장 속에서도 편리하게 데이터를 검색하여 도출해내는 제이볼트 플러스를 지금 이용해보시기 바랍니다.', 
+                        img='img_product_jvault_intro', 
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>제이볼트 플러스</em>가 특별한 이유", 
+                        decs="제이볼트 플러스는 매일 축적되는 방대한 양의 메일 보존 문제를 해결하고 실제 활용하기 힘든 메일 검색의 한계까지 해결했습니다. <br>단순한 이메일 백업이 아닌 이메일을 통한 중요 정보 유출을 방지하고 삭제된 메일까지 손쉽게 복구하여 만에 하나 일어날 법적 대응 능력까지 확보할 수 있습니다. <br>쌓여가는 이메일 데이터의 축적과 저장 용량 부담 없이 제이볼트 플러스로 기업의 정보자산을 안전하게 보존하시기 바랍니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_jvault_benefits_01",
+                                title : "이메일 아카이빙",
+                                decs : "국내 기업 이메일 시스템에 <br>적합한 아카이빙"
+                            },
+                            {
+                                img : "img_product_jvault_benefits_02",
+                                title : "강력한 검색기능",
+                                decs : "첨부파일 내용 포함 <br>지능형 검색 결과 도출"
+                            },
+                            {
+                                img : "img_product_jvault_benefits_03",
+                                title : "쉬운 백업 및 복구",
+                                decs : "직관적 대쉬보드로 <br>전체 통계 파악 가능"
+                            },
+                            {
+                                img : "img_product_jvault_benefits_04",
+                                title : "컴플라이언스 대응",
+                                decs : "e-Discovery<i>*</i> 및 <br>개인정보보호법 준수"
+                            }
+                        ], 
+                        subDecs="<i>*</i>e-Discovery : 미국의 민사소송 규칙인 전자증거개시제도. 기업 소송 시, 상대방 또는 제3자로부터 소송과 관련된 모든 전자기록 수집할 수 있도록 허용한 제도",
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>제이볼트</em> 플러스로 누리는 안전한 생활', 
+                        decs='제이볼트 플러스만 있다면 메일과 첨부문서의 증가에도 걱정 없습니다. 제이볼트 플러스가 제공하는 효율적인 백업을 통해 <br>중요 메일 자료에 대한 쉬운 검색과 복구 기능을 만나보시기 바랍니다. 방대한 누적 이메일에서도 편리하게 검색하여 원하는 자료를 검색할 수 있으며, <br>위·변조 없는 원본 무결성 검증을 통한 보존으로 기업에서 필요한 법적 증거 자료 확보에 탁월합니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_jvault_features_01",
+                                title : "정책별 아카이빙",
+                                decs : "수집 전용 SMTP 엔진 탑재 <br>정책별 색인 및 보존 기간 설정"
+                            },
+                            {
+                                img : "img_product_jvault_features_02",
+                                title : "편리한 검색 기능",
+                                decs : "본문/첨부파일 등 검색 지원 <br>개인정보 검색지원"
+                            },
+                            {
+                                img : "img_product_jvault_features_03",
+                                title : "실시간 백업 및 복구",
+                                decs : "유실 메일 개별/일괄 복구 <br>로그 2차 백업지원"
+                            },
+                            {
+                                img : "img_product_jvault_features_04",
+                                title : "컴플라이언스 대응",
+                                decs : "원본 및 특정 영역 보존 <br>회계감사 기능 확보"
+                            },
+                            {
+                                img : "img_product_jvault_features_05",
+                                title : "아웃룩 연동",
+                                decs : "아웃룩/그룹웨어 Add-On 검색 <br>PST 파일 복구 및 변환"
+                            },
+                            {
+                                img : "img_product_jvault_features_06",
+                                title : "직관적 모니터링",
+                                decs : "웹 어드민 활동 감사 기록 <br>설정 규칙 위반 행위 감지"
+                            },
+                            {
+                                img : "img_product_jvault_features_07",
+                                title : "위·변조 방지",
+                                decs : "메일 원본 무결성 검증 <br>데이터 위·변조 방지"
+                            },
+                            {
+                                img : "img_product_jvault_features_08",
+                                title : "암호화 및 보안",
+                                decs : "웹 접근 방식/암호화 보안 <br>권한별 기능 제한"
+                            }
+                        ], 
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+
+                {{
+                    fn.cont_reference(
+                        title='<em>제이볼트 플러스</em> 도입 기업들', 
+                        decs='제이볼트 플러스를 도입한 기업들은 효율적인 이메일 아카이빙을 통해 방대한 이메일 용량을 절감하고 안전하게 이메일을 관리하고 계십니다.', 
+                        imgs=[
+                            "img_product_jvault_reference_01_01_m",
+                            "img_product_jvault_reference_01_02_m",
+                            "img_product_jvault_reference_01_03_m",
+                            "img_product_jvault_reference_01_04_m",
+                            "img_product_jvault_reference_01_05_m",
+                            "img_product_jvault_reference_01_06_m",
+                            "img_product_jvault_reference_02_01_m",
+                            "img_product_jvault_reference_02_02_m",
+                            "img_product_jvault_reference_02_03_m",
+                            "img_product_jvault_reference_02_04_m",
+                            "img_product_jvault_reference_02_05_m",
+                            "img_product_jvault_reference_02_06_m",
+                            "img_product_jvault_reference_03_01_m",
+                            "img_product_jvault_reference_03_02_m",
+                            "img_product_jvault_reference_03_03_m",
+                            "img_product_jvault_reference_03_04_m",
+                            "img_product_jvault_reference_03_05_m",
+                            "img_product_jvault_reference_03_06_m"
+                        ], 
+                        id='cont4', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="제이볼트 플러스가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6923', 
+                        mail='jvault@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

@@ -1,0 +1,190 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page07' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='문서중앙화', 
+            title2='다큐원', 
+            img='img_product_docuone_visual', 
+            decs='업무데이터의 중앙 집중화를 통해 기업 정보 자산을 안전하게 <br>통합 관리하는 문서중앙화 솔루션', 
+            type1=true, 
+            type2=true, 
+            type3=true, 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '레퍼런스', '이용방법'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='내 PC에 흔적을 남기지 않는 <em>다큐원</em>', 
+                        decs='<em>다큐원(DocuONE)</em>은 사용자 PC에 업무 데이터 저장을 원천 차단하여 내부자로 인한 정보유출 위협을 제거한 강력한 <em>문서중앙화 보안 솔루션</em> 입니다. <br>개별 PC에서 작업한 업무 데이터들을 중앙 서버에 저장하여 기업의 소중한 정보 자산 유출과 랜섬웨어 감염 위협으로부터 벗어나 안전하고 효율적인 업무환경을 구축할 수 있습니다. <br>다큐원은 기업의 경쟁력을 높이는 20년 이상 문서보안의 노하우를 개발해온 지란지교시큐리티의 검증된 문서보안 솔루션입니다.', 
+                        img='img_product_docuone_intro', 
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>다큐원</em>이 특별한 이유", 
+                        decs="기업의 모든 문서는 다큐원으로 저장되어 체계적으로 관리됩니다. 다큐원을 통해 문서의 유출 차단과 랜섬웨어, 악성코드 공격 등의 위협을 차단하고 <br>문서 사용자의 사용 현황을 한눈에 살펴볼 수 있습니다. 다큐원의 중앙관리를 통해 근본적인 업무 관리에 대한 체질 개선도 동시에 이루어 효율적인 <br>조직 업무 프로세스를 정립하고 문서보안과 더불어 기업의 경쟁력을 높여가실 수 있습니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_docuone_benefits_01",
+                                title : "정보 유출 차단",
+                                decs : "파일 반출 전송 결재 시스템 <br>& 협업 폴더 지원"
+                            },
+                            {
+                                img : "img_product_docuone_benefits_02",
+                                title : "랜섬웨어 대응",
+                                decs : "중앙 서버로 문서 저장 <br>랜섬웨어 등 로컬로 유입되는 위협 대응"
+                            },
+                            {
+                                img : "img_product_docuone_benefits_03",
+                                title : "재택 모드 지원",
+                                decs : "환경 변화 없는 사내 보안정책과 <br>동일한 업무 환경 지원"
+                            },
+                            {
+                                img : "img_product_docuone_benefits_04",
+                                title : "윈도우/웹 탐색기",
+                                decs : "기존 PC 환경과 동일 <br>사용자 러닝타임 제로"
+                            }
+                        ], 
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>다큐원</em>으로 한큐에 누리는 보안세상',
+                        decs='다큐원은 문서관리의 주체를 개인에서 기업으로 옮겼습니다. 사용하는 모든 문서에 대한 중앙관리와 반출 결재를 통해 기업 정보 유출을 강력하게 차단하고 문서의 <br>생성부터 파기까지 통합 모니터링합니다. 중앙관리 사용자는 기존과 동일한 업무 방식으로 문서를 열람을 하고 직접 편집과 저장을 통해 평소와 같은 방식으로 진행합니다. <br>사용자와 관리자 모두 만족하는 다큐원으로 손쉽게 문서를 관리하며 안전하게 기업의 문서 가치를 자산화해 보시기 바랍니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_docuone_features_01",
+                                title : "로컬 PC 저장 금지",
+                                decs : "로컬 PC 문서 중앙 서버로 이관 후 <br>기업에서 관리"
+                            },
+                            {
+                                img : "img_product_docuone_features_02",
+                                title : "정보 유출 차단",
+                                decs : "파일 반출 결재 시스템 및 매체 제어와 <br>IP 정책 접근 제어"
+                            },
+                            {
+                                img : "img_product_docuone_features_03",
+                                title : "이중 보안 필터",
+                                decs : "제목, 본문의 개인 정보 및 기업 설정 <br>키워드 검출 시 유통 차단"
+                            },
+                            {
+                                img : "img_product_docuone_features_04",
+                                title : "탐색기 지원",
+                                decs : "윈도우/웹 탐색기로 기존 사용자 <br>환경과 동일한 UI 지원 "
+                            },
+                            {
+                                img : "img_product_docuone_features_05",
+                                title : "협업 폴더 지원",
+                                decs : "사용자별 접근 권한 설정 <br>사용자 대상 협업 폴더 제공"
+                            },
+                            {
+                                img : "img_product_docuone_features_06",
+                                title : "파일 형상관리",
+                                decs : "문서 편집 시 자동 잠김, 동시 중복 편집 <br>예방 해제 요청/알림"
+                            },
+                            {
+                                img : "img_product_docuone_features_07",
+                                title : "대용량 파일 저장",
+                                decs : "CAD 및 디자인 설계 파일 등 대용량 파일 <br>저장소 별도 지원"
+                            },
+                            {
+                                img : "img_product_docuone_features_08",
+                                title : "파일 시점 복원",
+                                decs : "파일 이력 관리 및 시점별 복원, <br>손쉬운 데이터 이관"
+                            }
+                        ], 
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+
+                {{
+                    fn.cont_reference(
+                        title='<em>다큐원</em> 도입 기업들', 
+                        imgs=[
+                            "img_product_docuone_reference_01_01_m",
+                            "img_product_docuone_reference_01_02_m",
+                            "img_product_docuone_reference_01_03_m",
+                            "img_product_docuone_reference_01_04_m",
+                            "img_product_docuone_reference_01_05_m",
+                            "img_product_docuone_reference_01_06_m",
+                            "img_product_docuone_reference_02_01_m",
+                            "img_product_docuone_reference_02_02_m",
+                            "img_product_docuone_reference_02_03_m",
+                            "img_product_docuone_reference_02_04_m",
+                            "img_product_docuone_reference_02_05_m",
+                            "img_product_docuone_reference_02_06_m",
+                            "img_product_docuone_reference_03_01_m",
+                            "img_product_docuone_reference_03_02_m",
+                            "img_product_docuone_reference_03_03_m",
+                            "img_product_docuone_reference_03_04_m",
+                            "img_product_docuone_reference_03_05_m",
+                            "img_product_docuone_reference_03_06_m"
+                        ], 
+                        id='cont4', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_use(
+                        title='똑똑한 <em>다큐원</em> 이용법', 
+                        decs='다큐원 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        list_decs=[
+                            {
+                                title:'다큐원 엔터프라이즈',
+                                decs : '다큐원 엔터프라이즈는 기업 내부에 서버를 구축하여 기업 맞춤식 도입이 가능합니다. 보안성과 안정성에 초점을 둔 대규모 인프라가 구축된 기업에게 적합합니다.'
+                            },
+                            {
+                                title:'다큐원 스탠다드',
+                                decs : '다큐원 스탠다드는 별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 추가 설치 없이 장비의 전원 연결만으로 사용이 가능합니다.'
+                            },
+                            {
+                                title:'다큐원 클라우드',
+                                decs : '다큐원 클라우드는 기업별 단독 가상 클라우드 서버로 구축형과 동일한 성능의 문서중앙화 서비스를 제공하고 있습니다. 운영 전문 인력이 부족한 중소기업에 적합합니다.'
+                            }
+                        ], 
+                        id='cont5', 
+                        class=''
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="다큐원가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6929', 
+                        mail='docuone@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

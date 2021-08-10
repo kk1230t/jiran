@@ -1,0 +1,191 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page03' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='지능형 악성 이메일 모의 훈련', 
+            title2='머드픽스', 
+            img='img_product_mudfix_visual', 
+            decs='악성 이메일 해킹을 예방과 내부 임직원의 보안 인식을 향상시키는 <br>사회 공학적 해킹 이메일 대응 훈련', 
+            type1=true, 
+            type3=true, 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '레퍼런스', '이용방법'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='보안 인식 높이는 <em>머드픽스</em>',
+                        decs='<em>머드픽스(MudFix)</em>는 훈련용 악성 모의 이메일을 내부 임직원 메일로 발송하는 지속적인 훈련을 통해 악성 이메일 해킹을 예방하는 <em>악성 이메일 모의훈련 솔루션</em>입니다. <br>
+머드픽스는 악성 이메일 공격 증가에 따라 평소 메일을 통한 직원들의 실질적인 보안의식을 점검하고 보안 위협에 대해 경각심을 높이는 역할을 합니다. 기업 보안의 열쇠는 \'사람\'입니다. <br>
+사람의 보안 인식은 반복적인 교육을 통해 높아집니다. 머드픽스로 임직원의 보안 인식을 높여 나가실 수 있습니다.', 
+                        img='img_product_mudfix_intro', 
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>머드픽스</em>가 특별한 이유", 
+                        decs="머드픽스는 멘사(MENSA) 출신 상위 1%의 전문가들로 부터 시작되었습니다. 사람의 심리를 간파하는 해킹 기법에 대응하기 위해 권위 있는 전문가들이 만나 <br>
+사회공학적 해킹 대응 훈련 솔루션 머드픽스를 탄생시켰습니다. 머드픽스는 최신 악성 메일 트렌드를 반영한 지속적인 악성 이메일 모의 훈련으로 임직원의 보안 인식 전환을 <br>
+일으키고 보안 수준을 향상시킵니다. 그 어떤 보안 시스템보다도 강력한 보안 인식의 전환. 머드픽스를 시작하셔야 할 이유가 바로 여기 있습니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_mudfix_benefits_01",
+                                title : "최신 악성 위협 템플릿",
+                                decs : "기업 상황에 맞는<br> 최신 악성 파일 형태 제공"
+                            },
+                            {
+                                img : "img_product_mudfix_benefits_02",
+                                title : "지속 반복 훈련 및 관리",
+                                decs : "대상, 기간, 컨텐츠 <br>간편 설정 실시"
+                            },
+                            {
+                                img : "img_product_mudfix_benefits_03",
+                                title : "훈련자 정보 교육",
+                                decs : "개인 정보보호 교육 및 <br>보안 수준 가시성 확보"
+                            },
+                            {
+                                img : "img_product_mudfix_benefits_04",
+                                title : "기업 최적화 서비스",
+                                decs : "구축형/클라우드형 <br>고객 맞춤식 제공"
+                            }
+                        ], 
+                        subDecs="<i>*</i>APT(Advanced Persistent Threat) : 지능형 지속위협<br><i>**</i>Zero-Day : 제로데이 위협, 소프트웨어의 취약점 패치가 없는 시점에 이루어지는 공격",
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>머드픽스</em>의 훈련이 보안을 만듭니다', 
+                        decs='악성 이메일 위협에 대응하기 위해서는 반복적인 훈련을 통해 보안 인식을 향상시키는 것이 매우 중요합니다. 머드픽스는 반복적인 모의훈련을 통해 <br>보안 인식에 대한 상향 평준화를 이끌어 냅니다. 훈련 계획 수립에서부터 훈련 결과에 대한 통계까지 머드픽스가 제공하는 체계적인 훈련 시스템을 경험해보시기 바랍니다. <br>지속적인 재훈련 대상자의 행위를 단계별로 점검하고 보안 인식을 높여갈 수 있도록 머드픽스가 함께 하겠습니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_mudfix_features_01",
+                                title : "감염 PC 데이터 추출",
+                                decs : "유출 PC 내 파일 정보 리스트 <br>추출로 경각심 고취"
+                            },
+                            {
+                                img : "img_product_mudfix_features_02",
+                                title : "감염 대상자 반복 학습",
+                                decs : "감염자 대상 주기적인 <br>보안 인식 제고 훈련 시행"
+                            },
+                            {
+                                img : "img_product_mudfix_features_03",
+                                title : "최신 악성 훈련 양식",
+                                decs : "유효성 검사, 첨부파일, 확장자 페이크 등 <br>최신 유행 파일 제공"
+                            },
+                            {
+                                img : "img_product_mudfix_features_04",
+                                title : "간편 설정 기능",
+                                decs : "웹 에디터 편집기 기능 <br>대상, 기간, 콘텐츠 간편설정"
+                            },
+                            {
+                                img : "img_product_mudfix_features_05",
+                                title : "대상자 정보보호 교육",
+                                decs : "보안 인식 취약대상 <br>개인 정보보호 교육 제공"
+                            },
+                            {
+                                img : "img_product_mudfix_features_06",
+                                title : "유연한 대상자 관리",
+                                decs : "개별/전체 훈련 진행 관리 <br>사용자 정의 태그 기능 제공"
+                            },
+                            {
+                                img : "img_product_mudfix_features_07",
+                                title : "실시간 훈련 파악 기능",
+                                decs : "전체 진행 상황 파악 <br>직관적 대시보드 제공"
+                            },
+                            {
+                                img : "img_product_mudfix_features_08",
+                                title : "훈련 결과 상세 보고서",
+                                decs : "직관적 훈련 결과 그래프 및 <br>컨텐츠별 통계 제공"
+                            }
+                        ], 
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+
+                {{
+                    fn.cont_reference(
+                        title='<em>머드픽스</em> 도입 기업들', 
+                        decs='머드픽스를 도입한 기업들은 지속적인 악성 이메일 모의훈련을 통해 기업의 보안 인식 수준을 향상시켰습니다.', 
+                        imgs=[
+                            "img_product_mudfix_reference_01_01_m",
+                            "img_product_mudfix_reference_01_02_m",
+                            "img_product_mudfix_reference_01_03_m",
+                            "img_product_mudfix_reference_01_04_m",
+                            "img_product_mudfix_reference_01_05_m",
+                            "img_product_mudfix_reference_01_06_m",
+                            "img_product_mudfix_reference_02_01_m",
+                            "img_product_mudfix_reference_02_02_m",
+                            "img_product_mudfix_reference_02_03_m",
+                            "img_product_mudfix_reference_02_04_m",
+                            "img_product_mudfix_reference_02_05_m",
+                            "img_product_mudfix_reference_02_06_m",
+                            "img_product_mudfix_reference_03_01_m",
+                            "img_product_mudfix_reference_03_02_m",
+                            "img_product_mudfix_reference_03_03_m",
+                            "img_product_mudfix_reference_03_04_m",
+                            "img_product_mudfix_reference_03_05_m",
+                            "img_product_mudfix_reference_03_06_m"
+                        ], 
+                        id='cont4', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_use(
+                        title='똑똑한 <em>머드픽스</em> 이용법', 
+                        decs='머드픽스를 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        list_decs=[
+                            {
+                                title:'머드픽스 어플라이언스',
+                                decs : '머드픽스 어플라이언스는 별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 추가 설치 없이 장비의 전원 연결만으로 사용이 가능합니다. 지속적인 보안 인식 훈련이 필요한 기업에게 적합합니다.'
+                            },
+                            {
+                                title:'머드픽스 클라우드(SaaS)',
+                                decs : '머드픽스 클라우드는 웹상에서 간편하게 회원가입만으로 서비스를 체험할 수 있도록 제공하고 있습니다. 훈련 회차를 선택하거나 연간으로 이용할 수 있는 머드픽스 클라우드는 운영 전문 인력이 부족한 중소기업에 적합합니다.'
+                            }
+                        ], 
+                        id='cont5', 
+                        class=''
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="머드픽스가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6923', 
+                        mail='mudfix@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

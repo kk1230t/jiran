@@ -1,0 +1,191 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page08' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='보안 파일서버', 
+            title2='오피스하드 VEX', 
+            img='img_product_officehard_visual', 
+            decs='안전한 보안 협업 환경과 기업 정보 자산을 통합 관리하는 <br>기업용 보안 파일 서버 솔루션', 
+            type1=true, 
+            type2=true, 
+            type3=true, 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '레퍼런스', '이용방법'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='스마트 협업의 시작, <em>오피스하드 VEX</em>',
+                        decs='<em>오피스하드 VEX(OfficeHARD VEX)</em>는 디지털 자산의 저장과 공유, 협업, 자료 보안, 정보 통합 등의 효율적인 기능을 제공하는 <br>국내 보안 서버 점유율 1위 <em>기업용 보안 파일 서버</em>입니다. 부서와 업체 간의 정보 공유와 공동 작업을 위한 다양한 기능과 함께 스마트한 협업 환경을 제공합니다. <br>랜섬웨어나 악성코드와 같은 보안 위협으로부터 기업 중요 자산을 보호하고 정보 유출에 대한 선제적 대응도 탁월한 보안 파일 서버를 지금 만나보시기 바랍니다.', 
+                        img='img_product_officehard_intro', 
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>오피스하드 VEX</em>가 특별한 이유", 
+                        decs="오피스하드 VEX는 다양한 운영 정책으로 기업의 정책별 요구 사항을 반영하며 최적화된 보안 업무 환경을 제공하고 있습니다. <br>오피스하드 VEX를 통해 기업 내부 정보 보안을 더욱 강화시키고 국가기관의 보안 권고와 지침 반영에도 걱정 없이 대응할 수 있습니다. <br>랜섬웨어와 정보 유출 사고로부터 기업의 중요 정보를 안전하게 보호할 수 있는 방법, 오피스하드 VEX가 알려드립니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_officehard_benefits_01",
+                                title : "악성 위협 선제 대응",
+                                decs : "랜섬웨어와 악성 위협으로부터 <br>기업의 중요 자산 보호"
+                            },
+                            {
+                                img : "img_product_officehard_benefits_02",
+                                title : "내부 정보 보안 강화",
+                                decs : "효과적인 권한 설정 <br>암호화 및 접근 통제 강화"
+                            },
+                            {
+                                img : "img_product_officehard_benefits_03",
+                                title : "효율적 협업 방식",
+                                decs : "협업을 위한 팀/부서 폴더, 개인폴더 <br>공유함, 파일 송/수신함 제공"
+                            },
+                            {
+                                img : "img_product_officehard_benefits_04",
+                                title : "사용 편의성 우수",
+                                decs : "멀티 웹 브라우저 환경 지원, <br>실시간 통계 모니터링"
+                            }
+                        ], 
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>오피스하드 VEX</em>로 누리는 안전한 협업 생활',
+                        decs='오피스하드 VEX가 제공하는 웹 탐색기에서의 직접 편집은 서버에 암호화된 형태로 저장되어 랜섬웨어에 감염된 파일이 업로드되어도 <br>서버 내 다른 문서에게 추가 감염을 발생시키지 않는 가장 큰 장점이 있습니다. 또한 부서 간 정보를 공유 시 효율적인 협업을 위한 <br>개인폴더 공유함, 파일 송/수신함을 제공하며 실수로 인한 정보 삭제에도 즉시 복구가 가능하도록 설정할 수 있어 안전한 협업이 가능해집니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_officehard_features_01",
+                                title : "전용 웹 탐색기 지원",
+                                decs : "전용 웹 탐색기 내 열람으로 랜섬웨어 <br>확산 방지 탐색기 내 직접 편집 가능"
+                            },
+                            {
+                                img : "img_product_officehard_features_02",
+                                title : "검색 최적화 기능",
+                                decs : "본문 추출 엔진이 기본 탑재 <br>빠르고 편리한 본문 검색 지원"
+                            },
+                            {
+                                img : "img_product_officehard_features_03",
+                                title : "권한 관리",
+                                decs : "폴더별 사용자 및 그룹 세부 권한 <br>다수 시스템 중간 관리자 설정"
+                            },
+                            {
+                                img : "img_product_officehard_features_04",
+                                title : "백업 설정 기능",
+                                decs : "사용자 기준 별 백업 파일 및 <br>스케줄 설정 및 문서 유실 방지"
+                            },
+                            {
+                                img : "img_product_officehard_features_05",
+                                title : "파일 보안",
+                                decs : "파일 전송구간 암호화 지원 <br>파일 저장 시 보안폴더 암호화"
+                            },
+                            {
+                                img : "img_product_officehard_features_06",
+                                title : "DB 보안",
+                                decs : "IP 별 접근 제약 및 접속 정보 및 <br>사용자 개인 정보 암호화 및 SSL 지원"
+                            },
+                            {
+                                img : "img_product_officehard_features_07",
+                                title : "로그관리 및 사용 통계",
+                                decs : "파일 이용 현황 일/월별 리포트 <br>모든 사용 내용 로그 지원"
+                            },
+                            {
+                                img : "img_product_officehard_features_08",
+                                title : "다양한 부가 기능",
+                                decs : "시스템 리소스 모니터링 <br>다양한 오픈 API 제공"
+                            }
+                        ], 
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+
+                {{
+                    fn.cont_reference(
+                        title='<em>오피스하드 VEX</em> 도입 기업들', 
+                        decs='오피스하드 VEX를 도입한 기업들은 보안 파일 서버를 통해 기업정보 유출을 차단하며 안전하고 스마트한 협업 환경을 누리고 계십니다.', 
+                        imgs=[
+                            "img_product_officehard_reference_01_01_m",
+                            "img_product_officehard_reference_01_02_m",
+                            "img_product_officehard_reference_01_03_m",
+                            "img_product_officehard_reference_01_04_m",
+                            "img_product_officehard_reference_01_05_m",
+                            "img_product_officehard_reference_01_06_m",
+                            "img_product_officehard_reference_02_01_m",
+                            "img_product_officehard_reference_02_02_m",
+                            "img_product_officehard_reference_02_03_m",
+                            "img_product_officehard_reference_02_04_m",
+                            "img_product_officehard_reference_02_05_m",
+                            "img_product_officehard_reference_02_06_m",
+                            "img_product_officehard_reference_03_01_m",
+                            "img_product_officehard_reference_03_02_m",
+                            "img_product_officehard_reference_03_03_m",
+                            "img_product_officehard_reference_03_04_m",
+                            "img_product_officehard_reference_03_05_m",
+                            "img_product_officehard_reference_03_06_m"
+                        ], 
+                        id='cont4', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_use(
+                        title='똑똑한 <em>오피스하드 VEX</em> 이용법', 
+                        decs='오피스하드 VEX는  도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        list_decs=[
+                            {
+                                title:'오피스하드 구축형',
+                                decs : '오피스하드 구축형은 기업 내부에 서버를 구축하여 기업 맞춤식 도입이 가능합니다. 보안성과 안정성에 초점을 둔 대규모 인프라가 구축된 기업에게 적합합니다.'
+                            },
+                            {
+                                title:'오피스하드 어플라이언스',
+                                decs : '오피스하드 어플라이언스는 별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 추가 설치 없이 장비의 전원 연결만으로 사용이 가능합니다.'
+                            },
+                            {
+                                title:'오피스하드 클라우드',
+                                decs : '오피스하드 클라우드는 초기 투자비용 없이 빠른 설치 및 운영이 가능하고 월과금 형식으로 이용할 수 있습니다. 초기 도입 구축 부담을 줄일 수 있어 중소기업에 적합합니다.'
+                            }
+                        ], 
+                        id='cont5', 
+                        class=''
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="오피스하드 VEX가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6929', 
+                        mail='officehard@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

@@ -1,10 +1,188 @@
-{% macro cont_first(title='', decs='', img='', sub_decs='') %}
-	<div class="prd_sec" id="cont1">
+{% macro cont_visual(title1='', title2='', img='', decs='', type1, type2, type3, btn1, btn2, btn3 ) %}
+    <div class="visual_sec" id="visualSec">
+        <div class="txt_sec">
+            <p class="title">
+                <span class="small">{{title1}}</span>
+                <span>{{title2}}</span>
+            </p>
+            <div class="visual_img">
+                <img src="../../images/product/{{img}}.png" alt="">
+            </div>
+            <p class="decs">{{decs}}</p>
+			{% if type1 or type2 or type3 %}
+            <div class="type">
+				{% if type1 %}
+                <span class="type1"><i></i>구축형</span>
+				{% endif %}
+				{% if type2 %}
+                <span class="type2"><i></i>어플라이언스</span>
+				{% endif %}
+				{% if type3 %}
+                <span class="type3"><i></i>클라우드</span>
+				{% endif %}
+            </div>
+			{% endif %}
+			{% if btn1 or btn2 or btn3 %}
+            <div class="btns">
+				{% if btn1 %}
+                <a href="" class="download">브로셔 다운로드</a>
+				{% endif %}
+				{% if btn2 %}
+                <a href="" class="demo">실시간 데모</a>
+				{% endif %}
+				{% if btn3 %}
+                <a href="" class="cloude">클라우드 30일 무료</a>
+				{% endif %}
+            </div>
+			{% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro cont_first(title='', decs='', img='', sub_decs='', id='', class='') %}
+	<div class="prd_sec {{class}}" id="{{id}}">
 		<div class="inset">
 			<p class="title">{{ title }}</p>
 			<p class="decs">{{decs}}</p>
 			<div class="img"><img src="../../images/product/{{img}}.png" alt=""></div>
-			<p class="sub_decs">{{sub_decs}}</p>
+			{% if sub_decs %}
+				<p class="sub_decs">{{sub_decs}}</p>	
+			{% endif %}
+			
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro scrollnav(nav) %}
+	<div class="inset">
+		<ul class="ui-spynav">
+		{% for i in nav %}
+			<li><a href="#cont{{loop.index}}"><span>{{i}}</span></a></li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endmacro %}
+
+
+{% macro cont_benefits(title, decs, list_decs, subDecs, id, class) %}
+	<div class="prd_sec {{class}}" id="{{id}}">
+		<div class="inset">
+			<p class="title">{{title}}</p>
+			<p class="decs">{{decs}}</p>
+			<div class="prd_benefits">
+				<ul>
+					{% for txts in list_decs %}
+						<li>
+							<div class="img_ico"><img src="../../images/product/{{txts.img}}.png" alt=""></div>
+							<dl>
+								<dt>{{txts.title}}</dt>
+								<dd>{{txts.decs}}</dd>
+							</dl>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% if subDecs %}
+			<p class="sub_decs">{{subDecs}}</p>	
+			{% endif %}
+			
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro cont_features(title, decs, list_decs, id, class) %}
+	<div class="prd_sec {{class}}" id="{{id}}">
+		<div class="inset">
+			<p class="title">{{title}}</p>
+			<p class="decs">{{decs}}</p>
+			<div class="prd_features">
+				<ul>
+					{% for txts in list_decs %}
+						<li>
+							<div class="img_ico"><img src="../../images/product/{{txts.img}}.png" alt=""></div>
+							<dl>
+								<dt>{{txts.title}}</dt>
+								<dd>{{txts.decs}}</dd>
+							</dl>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+
+
+{% macro cont_reference(title, decs, imgs, id, class) %}
+	<div class="prd_sec {{class}}" id="{{id}}">
+		<div class="inset">
+			<p class="title">{{title}}</p>
+			{% if decs %}
+				<p class="decs">{{decs}}</p>	
+			{% endif %}
+			<div class="prd_reference">
+				<ul>
+					{% for img in imgs %}
+						<li><div class="img_ico"><img src="../../images/product/{{img}}.png" alt=""></div></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="more">
+				<a href="">레퍼런스 더보기</a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro cont_use(title, decs, list_decs, id, class) %}
+{% set imgs = [
+	'img_product_use_appliance',
+	'img_product_use_cloud',
+	'img_product_use_onpremise'
+] %}
+	<div class="prd_sec {{class}}" id="{{id}}">
+		<div class="inset">
+			<p class="title">{{title}}</p>
+			<p class="decs">{{decs}}</p>
+			<div class="prd_use">
+				<div class="swiper-container" id="box_slider">
+					<div class="box swiper-wrapper">
+						{% for txts in list_decs %}
+							<div class="lists swiper-slide">
+								<div>
+									<span class="num">
+									{% for i in range(0, loop.index) %}
+										<i></i>
+									{%- endfor %}
+									</span>
+									<dl>
+										<dt>{{txts.title}}</dt>
+										<dd>{{txts.decs}}</dd>
+									</dl>
+									<a href="" class="link">브로셔 다운로드</a>
+									<div class="img_ico"><img src="../../images/product/{{imgs[loop.index0]}}.png" alt=""></div>
+								</div>
+							</div>	
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro cont_guide(title1, title2, tel, mail, id, class) %}
+	<div class="prd_sec {{class}}" id="{{id}}">
+		<div class="inset">
+			<p class="qu1">{{title1}}</p>
+			<p class="qu2">{{title2}}</p>
+			<div class="links">
+				<a href="tel:{{tel}}" class="tel">{{tel}}</a>
+				<a href="mailto:{{mail}}" class="mail">{{mail}}</a>
+			</div>
 		</div>
 	</div>
 {% endmacro %}

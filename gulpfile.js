@@ -36,7 +36,6 @@ const gulp                      = require('gulp'),
       spritesmith               = require('gulp.spritesmith'),
       rollup                    = require('gulp-rollup'),
       ejs                       = require("gulp-ejs"),
-      rename                    = require("gulp-rename"),
       argv                      = require('yargs').argv,
       handlebars                = require('gulp-handlebars'),
       wrap                      = require('gulp-wrap'),
@@ -45,6 +44,7 @@ const gulp                      = require('gulp'),
       nunjucks                  = require('gulp-nunjucks-html'),
       data                      = require('gulp-data'),
       beautify                  = require('gulp-beautify'),
+      rename                    = require("gulp-rename"),
       // sassPartialsImported = require('gulp-sass-partials-imported'),
 
 
@@ -105,6 +105,18 @@ gulp.task('images', () => {
     .pipe(imagemin())
     .pipe(gulp.dest(dist_image_folder))
     .pipe(browserSync.stream());
+});
+gulp.task('rename', () => {
+  return gulp.src([ src_folder + '/rename/**/*.+(png|jpg|jpeg|gif|svg|ico)' ])
+  .pipe(rename(function (path) {
+    var name = path.basename.replaceAll('-', '_').replace('@3x', '_m')
+    return {
+      dirname: path.dirname+'/dist',
+      basename : name,
+      extname: path.extname
+    }
+  }))
+  .pipe(gulp.dest(dist_folder))
 });
 
 

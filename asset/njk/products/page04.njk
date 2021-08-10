@@ -1,0 +1,235 @@
+
+{% set title = '제품소개' %}
+{% set products_type = 'page04' %}
+{% import "./templates/_fn.njk" as fn %}
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="prodocuts">
+    {{
+        fn.cont_visual(
+            title1='지능형 이메일 통합보안 솔루션', 
+            title2='스팸스나이퍼', 
+            img='img_product_spamsniper_visual', 
+            decs='스팸 바이러스 메일 차단 기능 기반 스캠/랜섬웨어/APT에 대응하는 <br>이메일 통합 보안 솔루션', 
+            type1=true, 
+            type2=true, 
+            type3=true, 
+            btn1=true
+        )
+    }}
+    <div class="prd_conts">
+        <div class="prd_scroll_spy">
+	        <div class="scroll_spy_nav" data-modules-scrollspy>
+                {{
+                    fn.scrollnav(['제품소개', '특장점', '주요기능', '추가기능', '레퍼런스', '이용방법'])
+                }}
+            </div>
+            <div class="scroll_spy_conts">
+                {{
+                    fn.cont_first(
+                        title='국내 점유율 1위 <em>스팸스나이퍼</em>',
+                        decs='<em>스팸스나이퍼(SpamSniper)</em>는 스팸/악성코드 메일 및 메일 서버 공격을 차단할 뿐 아니라 내부 발송 메일에 대한 모니터링을 통해 기업의 중요 정보 유출을 차단하는 <br>국내 No.1 <em>이메일 통합 보안 솔루션</em>입니다. 스팸스나이퍼는 다각적인 정보를 반영한 랜섬웨어 및 APT<i>*</i> 악성 위협 차단 알고리즘으로 최상의 이메일 보안 환경을 자랑합니다. <br>듀얼 바이러스 엔진과  강력한 필터링 엔진을 탑재한 스팸스나이퍼로 신·변종, 암호화된 스팸·바이러스 메일까지도 차단하여 안전한 메일 생활을 누리시기 바랍니다.', 
+                        img='img_product_spamsniper_intro', 
+                        sub_decs='<i>*</i>APT(Advanced Persistent Threat) : 지능형 지속 공격',
+                        id='cont1',
+                        class = ''
+                    )
+                }}
+
+                {{
+                    fn.cont_benefits(
+                        title="<em>스팸스나이퍼</em>를 선택하는 이유",
+                        decs="스팸스나이퍼는 스팸 메일 패턴을 수집하고 트렌드를 분석하는 전문 조직이 하루 24회 이상 최신 스팸메일 패턴을 업데이트하며 기업이 안심할 수 있는 이메일 보안 환경을 <br>구축하고 있습니다. 스팸스나이퍼는 20년 동안 강력한 스팸 이메일 대응을 전제로 24X365 고객지원 서비스를 제공하며 이메일 보안의 품격을 높여 왔습니다. <br>국내 1위의 자리에 만족하지 않고 세계 1위 이메일 보안 솔루션이 되기 위해 전문적인 안티 스팸 랩(Anti-Spam Lab)을 운영하며 전 세계의 악성 위협 차단에 도전합니다.", 
+                        list_decs = [
+                            {
+                                img : "img_product_spamsniper_benefits_01",
+                                title : "메일 보안 시장점유율 1위",
+                                decs : "20년 이상의 국내 메일 환경 <br>운영 노하우 보유"
+                            },
+                            {
+                                img : "img_product_spamsniper_benefits_02",
+                                title : "안티스팸 랩 운영",
+                                decs : "하루 24회 이상 최신 스팸메일 <br>패턴 업데이트"
+                            },
+                            {
+                                img : "img_product_spamsniper_benefits_03",
+                                title : "높은 안정성 보장",
+                                decs : "일일 최대 100만 <br>메일 트래픽 처리"
+                            },
+                            {
+                                img : "img_product_spamsniper_benefits_04",
+                                title : "최상의 고객지원 서비스",
+                                decs : "유선/원격 고객지원 <br>전담 부서 운영"
+                            }
+                        ], 
+                        id="cont2",
+                        class="bg_grey"
+                    )
+                }}
+
+                {{
+                    fn.cont_features(
+                        title='<em>스팸스나이퍼</em>가 하는일', 
+                        decs='스팸스나이퍼를 전원을 연결 하는 것 만으로 스캠<i>*</i>, 스팸, 바이러스, 피싱메일<i>**</i>의 위협에서부터 자유로워지며 기존 운영 시스템의 변경 없이 자동으로 관리할 수 있습니다. <br>이와 동시 스팸스나이퍼는 기업 업무환경에 최적화된 보안 환경 구성으로 일일 최대 100만 건의 메일 트래픽을 처리하며 안정적인 서비스를 제공하고 있습니다. <br>기업 도입 환경에 따라 적합한 구성과 기능으로 최적화된 운영 시스템을 도입하실 수 있습니다.', 
+                        list_decs = [
+                            {
+                                img : "img_product_spamsniper_features_01",
+                                title : "스팸/바이러스 메일 차단",
+                                decs : "4중 필터링 및 관제 엔진 통한 <br>강력한 스팸메일 대응"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_02",
+                                title : "스캠 방지/발신자 인증",
+                                decs : "미확인 발신자/헤더 변조 차단 <br>및 수/발신자 인증 강화"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_03",
+                                title : "메일 서버 보호/관리",
+                                decs : "메일 서버 공격 차단 및 정크메일 제거로 <br>서버 부하 절감"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_04",
+                                title : "메일 아카이빙",
+                                decs : "압축 저장식 용량 절감 <br>메일 장기 보관 및 검색엔진 지원"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_05",
+                                title : "중앙관제센터 모니터링",
+                                decs : "메일 현황 통합 대시보드 <br>메일 위협 공격 차단 통계"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_06",
+                                title : "통합 관리자 기능",
+                                decs : "주간/월간 리포팅 강화 <br>실시간 장애 푸시 알람"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_07",
+                                title : "차별화된 고객지원",
+                                decs : "One-Click 원격 및 <br>24X365 고객지원 서비스 지원"
+                            },
+                            {
+                                img : "img_product_spamsniper_features_08",
+                                title : "APT 에디션",
+                                decs : "APT 전문 솔루션 연동 <br>가상환경 내 행위 기반 분석<span class=\"small\">※별도 추가구성</span>"
+                            }
+                        ], 
+                        sub_decs='<i>*</i>스캠(SCAM) : 기업 이메일 정보를 해킹해 거래처로 둔갑하여 거래 대금을 가로채는 신용사기 이메일<br><i>**</i>피싱(FISHING) : 특정인 타깃 개인 정보 및 특정 정보 탈취 공격 이메일',
+                        id="cont3",
+                        class=""
+
+                    )
+                }}
+                <div class="prd_sec apt_sec" id="cont4">
+                    <div class="inset">
+                        <p class="title">
+                            <span class="round">APT Edition</span>
+                            뛰는 APT 위에 나는 <em>스팸스나이퍼</em>
+                        </p>
+                        <p class="decs">갈수록 고도화되는 이메일 보안 위협에 대응하기 위해 스팸스나이퍼가 국내외 대표 샌드박스 벤더들과 제휴를 맺어 APT를 탐지하고 지능화된 악성 위협을 차단합니다. 
+스팸스나이퍼 APT는 스캠, 랜섬웨어, APT에 대응할 수 있도록 통합 보안 기능을 더했습니다. 콘텐츠 악성코드 무해화 기능과 이메일 사기 기법의 스캠 방지 기능을 탑재하여 
+기존 보안 솔루션의 한계를 보완했습니다. 이메일 APT 대응을 더해 더욱 강력해진 스팸스나이퍼 APT를 경험해 보시기 바랍니다.</p>
+                        <div class="prd_apt">
+                            <ul>
+                                <li>
+                                    <div class="img_ico"><img src="../../images/product/img_product_spamsniperapt_features_01_m.png" alt=""></div>
+                                    <dl>
+                                        <dt>샌드박스 연동으로 APT 탐지</dt>
+                                        <dd>장애 시 Bypass로 메일 서비스 정상 운영</dd>
+                                        <dd>조직도 연동으로 메일 라우팅 및 기존 메일 환경 보존</dd>
+                                        <dd>관리 포인트 일원화로 효율적 운영 가능</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <div class="img_ico"><img src="../../images/product/img_product_spamsniperapt_features_02_m.png" alt=""></div>
+                                    <dl>
+                                        <dt>콘텐츠 악성코드 무해화</dt>
+                                        <dd>액티브 콘텐츠 제거를 통한 파일 무해화</dd>
+                                        <dd>랜섬웨어, APT 및 Zero-Day 공격 완벽 차단</dd>
+                                        <dd>안전한 문서 파일로 재조합하여 제공</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <div class="img_ico"><img src="../../images/product/img_product_spamsniperapt_features_03_m.png" alt=""></div>
+                                    <dl>
+                                        <dt>스캠 방지 탑재</dt>
+                                        <dd>수신자 인증으로 미확인 사용자 차단</dd>
+                                        <dd>메일 비교로 변조된 발신자 및 Reply-to 위조 차단</dd>
+                                        <dd>발신 DB화를 통한 유사 도메인 감지</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                {{
+                    fn.cont_reference(
+                        title='<em>스팸스나이퍼</em> 도입 기업들', 
+                        decs='스팸스나이퍼를 도입한 기업들은 지능형 악성 이메일 공격을 차단한 안전한 이메일 생활을 누리고 계십니다.', 
+                        imgs=[
+                            "img_product_spamsniper_reference_01_01_m",
+                            "img_product_spamsniper_reference_01_02_m",
+                            "img_product_spamsniper_reference_01_03_m",
+                            "img_product_spamsniper_reference_01_04_m",
+                            "img_product_spamsniper_reference_01_05_m",
+                            "img_product_spamsniper_reference_01_06_m",
+                            "img_product_spamsniper_reference_02_01_m",
+                            "img_product_spamsniper_reference_02_02_m",
+                            "img_product_spamsniper_reference_02_03_m",
+                            "img_product_spamsniper_reference_02_04_m",
+                            "img_product_spamsniper_reference_02_05_m",
+                            "img_product_spamsniper_reference_02_06_m",
+                            "img_product_spamsniper_reference_03_01_m",
+                            "img_product_spamsniper_reference_03_02_m",
+                            "img_product_spamsniper_reference_03_03_m",
+                            "img_product_spamsniper_reference_03_04_m",
+                            "img_product_spamsniper_reference_03_05_m",
+                            "img_product_spamsniper_reference_03_06_m"
+                        ], 
+                        id='cont5', 
+                        class='bg_grey'
+                    )
+                }}
+
+                {{
+                    fn.cont_use(
+                        title='똑똑한 <em>스팸스나이퍼</em> 이용법', 
+                        decs='스팸스나이퍼는 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        list_decs=[
+                            {
+                                title:'스팸스나이퍼 구축형',
+                                decs : '스팸스나이퍼 구축형은 기업 내부에 서버를 구축하여 기업 맞춤식 도입이 가능합니다. 보안성과 안정성에 초점을 둔 대규모 인프라가 구축된 기업에게 적합합니다.  보안성과 안정성에 초점을 둔 대규모 인프라가 구축된 기업에게 적합합니다.'
+                            },
+                            {
+                                title:'스팸스나이퍼 어플라이언스',
+                                decs : '스팸스나이퍼 어플라이언스는 별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 추가 설치 없이 장비의 전원 연결만으로 사용이 가능합니다.'
+                            },
+                            {
+                                title:'스팸스나이퍼 클라우드<span class="small">SECaaS(Security as a Service)</span>',
+                                decs : '지란더클라우드는 서비스 신청 즉시 사용 가능한 스팸스나이퍼의 클라우드 버전입니다. 수신 이메일을 클라우드에 별도 격리 후 분석합니다. 운영 전문 인력이 부족한 중소기업에 적합합니다.'
+                            }
+                        ], 
+                        id='cont6', 
+                        class=''
+                    )
+                }}
+
+                {{
+                    fn.cont_guide(
+                        title1="스팸스나이퍼가 궁금하신가요?", 
+                        title2='편하신 방법으로 문의하세요!', 
+                        tel='02-2006-6923', 
+                        mail='sniper@jiran.com', 
+                        id='', 
+                        class='guide'
+                    )
+                }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    
