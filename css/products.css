@@ -1747,15 +1747,21 @@
 .quick_menu {
     position: absolute;
     top: 150px;
-    right: 178px;
+    right: 100px;
     z-index: 9999;
     letter-spacing: -1px;
 }
 
 .quick_menu [data-modules-sticky].fixed {
     position: fixed;
-    right: 178px;
+    right: 100px;
     top: 100px;
+}
+
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .quick_menu [data-modules-sticky].fixed {
+        right: 50px;
+    }
 }
 
 .quick_menu .sec {
@@ -1809,7 +1815,19 @@
     margin-top: 8px;
 }
 
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .quick_menu {
+        right: 50px;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1279px) {
+    .quick_menu {
+        display: none;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
     .quick_menu {
         display: none;
     }

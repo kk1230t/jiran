@@ -1025,13 +1025,16 @@ $colors:
 .quick_menu{
     position: absolute;
     top:150px;
-    right: 178px;
+    right: 100px;
     z-index: 9999;
     letter-spacing: -1px;
     [data-modules-sticky].fixed{
         position: fixed;
-        right: 178px;
+        right: 100px;
         top: 100px;
+        @include respondToMinMax(1280,1400){
+            right: 50px;
+        }
     }
     .sec{
         background: #fff;
@@ -1079,7 +1082,13 @@ $colors:
             margin-top: 8px;
         }
     }
+    @include respondToMinMax(1280,1400){
+        right: 50px;
+    }
     @include respondTo(tablet){
+        display: none;
+    }
+    @include respondTo(mobile){
         display: none;
     }
 }
