@@ -1562,7 +1562,154 @@
 })(window[LIB_NAME], jQuery);
 
 
-
+/**
+ * @name sticky
+ * @selector [data-modules-sticky]'
+ * @options breakPoint : $(element) 	// 전달된 셀렉터 의 포지션 하단에서 브레이크
+ */
+ ;(function(core, $, undefined){
+    "use strict";
+    var win = $(window),
+    Default = {
+        padding : 0,
+        breakPoint : null,
+        relativeLists : null,
+        relativeTarget : null,
+        activeSticky : false,
+        className : null,
+        align : 'top',
+        name : "sticky"
+    },
+    activeClass = 'fixed',
+    forEach = Array.prototype.forEach,
+    name = "sticky",
+    ui = core.ui,
+    Widget = ui.Widget,
+    Sticky = Widget.extend({
+		name : name,
+		init: function (element, config){
+			var _ = this;
+			var options = _.options = $.extend({}, Default, config);
+			Widget.fn.init.call(_, element, options);
+            _.options.padding = Number(_.options.padding);
+            _.element.wrap('<div class="sticky-ui-wrapper">')
+            _.element.before('<div class="sticky-placeholder">')    
+            _.placehiolder = _.element.parent().find('.sticky-placeholder');
+            _.wrapper = _.element.closest('.sticky-ui-wrapper');
+            if(_.options.className !== null ) _.wrapper.addClass(_.options.className);
+            _._setBreakPoint();
+            _._isResize = false;
+            _.posRefresh();
+            _.activeSticky();
+            // console.log(_.placehiolder.offset().top);
+            $(this).trigger('scroll');
+			_._bindEvent();
+		},
+		_bindEvent : function() {
+            var _ = this;
+            
+            win.on('load', function(e){
+                _._setBreakPoint();
+                _.posRefresh();
+                $(this).trigger('scroll');
+            })
+            .on('scroll', function(e){
+                e.preventDefault();
+                if(!_.element.is(':visible') || _._isResize ) return;
+				var $this = $(this);
+                var scrollPos = $this.scrollTop();
+                _.options.pos = _.placehiolder.offset().top + _.options.padding;
+				if(scrollPos > _.options.pos){
+                    _.element.addClass(activeClass);
+                    _.element.css(_.options.align, (Math.abs(_.options.padding)));
+                    _.options.activeSticky = true;
+					if(_.options.breakPoint !== null){
+                        _._breakAction(scrollPos);                        
+					}
+				}else{
+                    _.element.removeClass(activeClass);
+                    _.element.css(_.options.align, '')
+                    _.options.activeSticky = false;
+				}
+            })
+            .on('resize', function(e){
+                e.preventDefault();
+                _._isResize = true;
+                setTimeout(function(){
+                    _.posRefresh(); 
+                },0)
+                
+            })
+		},
+		posRefresh : function(pos){
+            var _ = this;
+            if(!_.element.is(':visible')) return;
+            _.element.removeClass('fixed');
+            _.element.css('top', '');
+            _._setRelativeTarget();
+            if(pos) _.options.padding = pos;
+            
+            _._isResize = false;
+            win.trigger('scroll');
+            
+        },
+        activeSticky : function(){
+            var _ = this;
+            if(_.options.activeSticky){
+                $('html,body').stop().animate({ scrollTop: _.options.pos}, 300);
+            }
+        },
+		_breakAction : function(pos) {
+            var _ = this;
+			var breakPointPos = _.breakPoint.offset().top + _.breakPoint.outerHeight() + pos;
+            var elPos = _.element.offset().top + _.element.outerHeight() + pos;
+			if(breakPointPos < elPos){
+                _.element.find(".sticky-inner").css({"transform":"translate(0, "+(breakPointPos - elPos)+"px)"});
+                _.element.addClass('ui-break');
+			}else{
+                _.element.find(".sticky-inner").css('transform','');
+                _.element.removeClass('ui-break');
+			}
+        },
+        _setRelativeTarget : function(){
+            var _ = this;
+            if(_.options.relativeLists !== null){
+                var elTop = 0;
+                forEach.call(_.options.relativeLists, function (item, i) {
+                    var el = $(item);
+                    var padding = 0;
+                    if(el.length > 0){
+                        padding = el.outerHeight();
+                    }
+                    console.log(el.outerHeight());
+                    elTop += padding;
+                });
+                _.options.padding = (elTop*-1);
+            }
+            if(_.options.relativeTarget !== null){
+                var el = $(_.options.relativeTarget);
+                if(el.data(name)){
+                    _.options.padding = (el.outerHeight() - el.data(name).options.padding) * -1;
+                }else if(el.length !== 0){
+                    _.options.padding = el.outerHeight() * -1;
+                }else{
+                    _.options.padding = 0;
+                }
+                
+            }
+        },
+        _setBreakPoint : function(){
+            var _ = this;
+            if(_.options.breakPoint !== null && _.element.closest(_.options.breakPoint).length > 0){
+                _.breakPoint = _.element.closest(_.options.breakPoint);
+                // console.log(_.options.breakPoint);
+            }else{
+                _.breakPoint = $(_.options.breakPoint)
+            }
+        }
+	})
+    ui.plugin(Sticky);
+})(window[LIB_NAME], jQuery);
 
 
 /**
@@ -1598,6 +1745,10 @@
         scrollspy : {
             el : '[data-modules-scrollspy]',
             name : "scrollspy"
+        },
+        sticky : {
+            el : '[data-modules-sticky]',
+            name : "sticky"
         }
     },
     commonUi = Widget.extend({
@@ -1708,13 +1859,11 @@
 				var scrollTop = $(this).scrollTop();
                 var scrollNav = $('[data-modules-scrollspy]').offset().top;
                 var animate = false;
-
                 if(wheelPos > 0 && scrollTop < scrollNav-10 && !animate ){
                     e.preventDefault();
                     $('html, body').stop().animate({scrollTop: scrollNav}, 500, function(){
                         animate = false;
                     });
-                    
                 }
 
 			});

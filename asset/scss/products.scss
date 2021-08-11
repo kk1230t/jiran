@@ -11,10 +11,11 @@ $colors:
     #0066ad,    //다큐원
     #0066ad,    //오피스하드 VEX
     #365abd,    //모바일키퍼
-    #009e6a,    //머드픽스
-    #009e6a,    //머드픽스
-    #009e6a,    //머드픽스
-    #c00011;    // 스팸스나이퍼
+    #365abd,    //메일세이퍼
+    #e35227,    //제이볼트 체인
+    #00a8a6,    //디센트
+    #0066ad,    // 다큐엑스
+    #0066ad;    // 딥아이알
 #wrap.products{
     overflow-x:visible;
     #header{
@@ -490,6 +491,9 @@ $colors:
             margin-top: 70px;
             font-weight: 500;
             line-height: 1.5;
+            em{
+                font-weight: 700;
+            }
             @include respondTo(mobile){
                 margin-top: 26px;
                 text-align: left;
@@ -638,6 +642,16 @@ $colors:
                     }
                 }
             }
+            &.length6{
+                ul{
+                    li{
+                        width: 33.3333%;
+                        &:last-child{
+                            width: 33.3334%;
+                        }
+                    }
+                }
+            }
             @include respondTo(mobile){
                 margin-top: 36px;
                 ul{
@@ -664,6 +678,16 @@ $colors:
                         .img_ico{
                             img{
                                 width: 50px;
+                            }
+                        }
+                    }
+                }
+                &.length6{
+                    ul{
+                        li{
+                            width: 50%;
+                            &:last-child{
+                                width: 50%;
                             }
                         }
                     }
@@ -998,3 +1022,64 @@ $colors:
     }
 }
 
+.quick_menu{
+    position: absolute;
+    top:150px;
+    right: 178px;
+    z-index: 9999;
+    letter-spacing: -1px;
+    [data-modules-sticky].fixed{
+        position: fixed;
+        right: 178px;
+        top: 100px;
+    }
+    .sec{
+        background: #fff;
+        padding: 12px 12px 15px;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.12);
+        text-align: center;
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #111;
+            &.sm{
+               color: #555;
+               font-size: 13px;
+               font-weight: 400;
+            }
+        }
+        .img{
+            margin:0 auto 6px;
+        }
+        &.event{
+            .img{
+                width: 102px;
+            }
+        }
+        &.contact{
+            .img{
+                width: 38px;
+            }
+        }
+        & ~ .sec{
+            margin-top: 7px;
+        }
+        a{
+            display: block;
+            height: 28px;
+            background: #ff7f00;
+            font-size: 13px;
+            color: #fff;
+            line-height: 28px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+    }
+    @include respondTo(tablet){
+        display: none;
+    }
+}

@@ -92,12 +92,12 @@
 {% endmacro %}
 
 
-{% macro cont_features(title, decs, list_decs, id, class) %}
+{% macro cont_features(title, decs, list_decs, subDecs, id, class) %}
 	<div class="prd_sec {{class}}" id="{{id}}">
 		<div class="inset">
 			<p class="title">{{title}}</p>
 			<p class="decs">{{decs}}</p>
-			<div class="prd_features">
+			<div class="prd_features length{{list_decs.length}}">
 				<ul>
 					{% for txts in list_decs %}
 						<li>
@@ -110,6 +110,9 @@
 					{% endfor %}
 				</ul>
 			</div>
+			{% if subDecs %}
+			<p class="sub_decs">{{subDecs}}</p>	
+			{% endif %}
 		</div>
 	</div>
 {% endmacro %}

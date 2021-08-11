@@ -124,12 +124,12 @@ gulp.task('rename', () => {
 gulp.task('js', () => {
   return gulp.src([ src_js_folder + '**/*.js' ]/*, { since: gulp.lastRun('js') }*/)
     .pipe(plumber())
-    // .pipe(webpack({
-    //   mode: 'development',  //development, production, none
-    //   externals: {
-    //     jquery: 'jQuery'
-    //   }
-    // }))
+    .pipe(webpack({
+      mode: 'production',  //development, production, none
+      externals: {
+        jquery: 'jQuery'
+      }
+    }))
     .pipe(sourcemaps.init())
     .pipe(babel({
       "presets": [
@@ -140,7 +140,7 @@ gulp.task('js', () => {
         }]
       ]
     }))
-    // .pipe(concat('style.js'))
+    .pipe(concat('uiframework.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_js_folder))

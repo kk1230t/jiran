@@ -1,6 +1,6 @@
 
 {% set title = '제품소개' %}
-{% set products_type = 'page01' %}
+{% set products_type = 'page010' %}
 {% import "./templates/_fn.njk" as fn %}
 
 
@@ -10,16 +10,13 @@
 <div class="prodocuts">
     {{
         fn.cont_visual(
-            title1='콘텐츠 악성코드 무해화', 
-            title2='새니톡스', 
-            img='img_product_sanitox_visual', 
-            decs='랜섬웨어를 원천 차단하고 위장 악성 파일의 실행 기능을 무력화 시키는 <br>강력한 CDR 솔루션', 
+            title1='모바일 이메일 보안', 
+            title2='메일세이퍼', 
+            img='img_product_mailsafer_visual', 
+            decs='모바일 이메일 관리를 통한 내부정보 유출 방지 <br>모바일 이메일 보안 전문 MEM 솔루션', 
             type1=true, 
             type2=true, 
-            type3=true, 
-            btn1=true, 
-            btn2=true, 
-            btn3=true 
+            btn1=true
         )
     }}
     <div class="prd_conts">
@@ -32,10 +29,9 @@
             <div class="scroll_spy_conts">
                 {{
                     fn.cont_first(
-                        title='랜섬웨어 제거하는 <em>새니톡스</em>', 
-                        decs='<em>새니톡스(SaniTOX)</em>는 사용자가 실행하는 모든 문서의 구조 분석을 통해 악성코드로 활용 가능한 액티브 콘텐츠 영역만을 탐지하여 제거(비활성화) 한 후 <br>안전한 파일로 재조합하는 <em>콘텐츠 악성코드 무해화(CDR<i>*</i>)</em> 솔루션입니다. 위협요소를 원천 제거 후 안전한 파일로 재조합하기 때문에  랜섬웨어 공격과 알려지지 않은 <br>보안 위협을 사전에 예방할 수 있습니다. 무해화된 문서만을 열람하는 새니톡스와 함께 안전한 문서 생활을 시작하실 수 있습니다.', 
-                        img='img_product_sanitox_intro', 
-                        sub_decs='<i>*</i>CDR(Content Disarm & Reconstruction) : 콘텐츠 악성코드 무해화 & 재조합 기술',
+                        title='스마트 모바일 오피스,<em>메일세이퍼</em>',
+                        decs='<em>메일세이퍼(MailSafer)</em>는 모바일 이메일 보안전용 앱을 통하여 기업 정보 유출을 방지하고 PC 환경의 아웃룩을 손쉽고 안전하게 <br>모바일에서 사용할 수 있는 <em>기업용 모바일 이메일 보안 솔루션</em> 입니다. 메일세이퍼는 기업 보안성과 사용자 편의성을 동시에 갖춘 스마트 모바일 오피스를 <br>구현하여 모바일 이메일 사용 증가에 따라 심각해지는 보안 위협에 대응할 수 있는 강력한 모바일 이메일 보안 환경을 제공합니다.', 
+                        img='img_product_mailsafer_intro', 
                         id='cont1',
                         class = ''
                     )
@@ -43,31 +39,35 @@
 
                 {{
                     fn.cont_benefits(
-                        title="<em>새니톡스</em>가 특별한 이유", 
-                        decs="새니톡스는 다년 간의 R&D 투자를 통해 자체 개발한 지란지교시큐리티만의 CDR 엔진으로 콘텐츠 구조를 분석해 비정상적인 포맷을 탐지하고 <br>구성요소를 빠르게 제거하여 원본의 모습으로 안전하게 재조합 합니다. 고객이 직접 업로드하는 웹하드를 비롯하여 서버, 망연계 시스템 어느 곳에든 <br>구축될 수 있는 새니톡스는 랜섬웨어, 악성코드, APT<i>*</i> 및 Zero-Day<i>**</i> 공격에도 삼중 보안이 가능합니다.", 
+                        title="<em>메일세이퍼</em>가 특별한 이유", 
+                        decs="메일세이퍼는 모바일 이메일 보안에 특화된 MEM<i>*</i> 솔루션으로 기존 메일 서버 변경 없이 단기간 모바일 이메일 보안 시스템을 구축할 수 있습니다. <br>메일세이퍼는 모바일 오피스의 핵심인 모바일 이메일의 활용도가 높은 기업들에게 필수 보안 기능을 제공하여 무거운 모바일 오피스나 자체 앱 개발 없이도 <br>단기간, 경제적인 비용으로 모바일 오피스를 구현하고 있습니다.", 
                         list_decs = [
                             {
-                                img : "img_product_sanitox_benefits_01",
-                                title : "강력한 콘텐츠 무해화",
-                                decs : "자체 개발 엔진 탑재로 강력한 무해화<br>성능 및 검증된 무결성 보장"
+                                img : "img_product_mailsafer_benefits_01",
+                                title : "내부 정보 유출 차단",
+                                decs : "읽기전용 뷰어 및
+자체 앱 보안 제공"
                             },
                             {
-                                img : "img_product_sanitox_benefits_02",
-                                title : "메일, 웹, 파일서버 연동",
-                                decs : "eMail G/W, 웹 API, NFS,<br>SMB, SFTP 등"
+                                img : "img_product_mailsafer_benefits_02",
+                                title : "사용자 친화적 UI",
+                                decs : "기존 PC 환경과 
+동일 인터페이스로 제공"
                             },
                             {
-                                img : "img_product_sanitox_benefits_03",
-                                title : "강력한 Post Analysis",
-                                decs : "직관적인 로그 및 통계, 레벨별 정보,<br>위험도 및 연관분석"
+                                img : "img_product_mailsafer_benefits_03",
+                                title : "컴플라이언스 대응",
+                                decs : "강화된 모바일 보안 
+가이드 준수"
                             },
                             {
-                                img : "img_product_sanitox_benefits_04",
-                                title : "최상의 고객지원 서비스",
-                                decs : "신속한 유선/원격/방문 지원으로<br>맞춤형 대응 및 안정적 운영 지원"
+                                img : "img_product_mailsafer_benefits_04",
+                                title : "손쉬운 구축 및 운영",
+                                decs : "기존 메일서버 변경없이 
+즉시 구축"
                             }
                         ], 
-                        subDecs="<i>*</i>APT(Advanced Persistent Threat) : 지능형 지속위협<br><i>**</i>Zero-Day : 제로데이 위협, 소프트웨어의 취약점 패치가 없는 시점에 이루어지는 공격",
+                        subDecs="<i>*</i>MEM(Mobile Email Management) : 모바일 이메일 보안",
                         id="cont2",
                         class="bg_grey"
                     )
@@ -75,48 +75,48 @@
 
                 {{
                     fn.cont_features(
-                        title='<em>새니톡스</em>로 누리는 안전한 생활', 
-                        decs='새니톡스 어플라이언스는 단일 장비에서 웹, 폴더, 메일, 파일서버 연동 등 다양한 인터페이스를 통합 지원하여 다양한 채널에서 활용할 수 있습니다.<br>그리고 새니톡스 클라우드는 기업의 운영부담을 줄인 클라우드 기반 에이전트 지원으로 문서 콘텐츠 보안과 관리를 더욱 편리하게 합니다.<br>기존 백신 또는 샌드박스로도 대응하기 어려운 악성코드, 랜섬웨어의 위협으로부터 CDR 기술을 이용한 새니톡스로 자유로워지세요.', 
+                        title='<em>메일세이퍼</em>로 안심하는 모바일 오피스 생활', 
+                        decs='메일세이퍼는 첨부파일 다운로드 금지와 캡처 방지 등 모바일 이메일을 통한 내부 정보 유출을 사전에 방지합니다. 모바일 오피스에 필요한 일정, 문서, 연락처 관리 등 <br>사용자 편의성을 제공하여 기업 보안성과 사용자 편의성을 한 번에 책임지고 관리합니다. 스마트 워크의 시대, 이제 모바일 메일 환경은 메일세이퍼로 안전하게 관리하시기 바랍니다.', 
                         list_decs = [
                             {
-                                img : "img_product_sanitox_features_01",
-                                title : "강력한 자체 CDR 엔진",
-                                decs : "실시간 무해화 및 원본 파일 재조합으로<br>안전한 파일 제공"
+                                img : "img_product_mailsafer_features_01",
+                                title : "내부 정보 유출 방지",
+                                decs : "파일 다운로드, <br>화면캡처, 메일포워딩 제어"
                             },
                             {
-                                img : "img_product_sanitox_features_02",
-                                title : "최적화 운영 관리",
-                                decs : "백신 및 CDR 엔진 업데이트<br>상시 최적화 유지"
+                                img : "img_product_mailsafer_features_02",
+                                title : "이메일 권한 제어",
+                                decs : "등록된 사용자 <br>접근 허용 및 통제"
                             },
                             {
-                                img : "img_product_sanitox_features_03",
-                                title : "유연한 정책 관리",
-                                decs : "차단/예외 등 다양한 정책관리<br>기능 지원"
+                                img : "img_product_mailsafer_features_03",
+                                title : "랜섬웨어 차단",
+                                decs : "HTML 뷰어 통한 <br>악성코드 감염 차단"
                             },
                             {
-                                img : "img_product_sanitox_features_04",
-                                title : "다양한 포맷 무해화",
-                                decs : "MS Office, 한글(HWP), PDF,<br>ZIP, Image 포맷 등 "
+                                img : "img_product_mailsafer_features_04",
+                                title : "PC 환경 유지",
+                                decs : "PC 환경 그대로 사용 <br>메일/일정/연락처 연동"
                             },
                             {
-                                img : "img_product_sanitox_features_05",
-                                title : "제품 확장성 지원",
-                                decs : "eMail G/W, API, SFTP, SMB, NFS 등<br>다양한 연계 및 확장성 지원"
+                                img : "img_product_mailsafer_features_05",
+                                title : "사용 편의성 극대화",
+                                decs : "캘린더, 연락처 등 <br>편의 기능 제공"
                             },
                             {
-                                img : "img_product_sanitox_features_06",
-                                title : "직관적 통계 리포트",
-                                decs : "로그 및 통계 분석 리포트 제공으로<br>위협 유형 분석"
+                                img : "img_product_mailsafer_features_06",
+                                title : "멀티 OS 지원",
+                                decs : "iOS/Android 지원 <br>태블릿 지원"
                             },
                             {
-                                img : "img_product_sanitox_features_07",
+                                img : "img_product_mailsafer_features_07",
                                 title : "고객 니즈 최적화",
                                 decs : "고객 규모에 맞는 어플라이언스<br>/에이전트 형태로 지원"
                             },
                             {
-                                img : "img_product_sanitox_features_08",
-                                title : "고효율 저비용",
-                                decs : "솔루션 확장성 대비<br>높은 가격 경쟁력"
+                                img : "img_product_mailsafer_features_08",
+                                title : "편리한 검색 지원", 
+                                decs : "메일 검색 <br>필터링, 북마크"
                             }
                         ], 
                         id="cont3",
@@ -127,27 +127,27 @@
 
                 {{
                     fn.cont_reference(
-                        title='<em>새니톡스</em> 도입 기업들', 
-                        decs='새니톡스를 도입한 기업들은 문서 속 악성 위협들을 무해화하여 안전한 문서 생활을 누리시고 계십니다.', 
+                        title='<em>메일세이퍼</em> 도입 기업들', 
+                        decs='메일세이퍼를 도입한 기업들은 안전한 모바일 이메일 환경을 구축하여 기업 정보 자산 유출을 차단하고 안전한 모바일 오피스 환경을 누리고 계십니다.', 
                         imgs=[
-                            "img_product_sanitox_reference_01_01_m",
-                            "img_product_sanitox_reference_01_02_m",
-                            "img_product_sanitox_reference_01_03_m",
-                            "img_product_sanitox_reference_01_04_m",
-                            "img_product_sanitox_reference_01_05_m",
-                            "img_product_sanitox_reference_01_06_m",
-                            "img_product_sanitox_reference_02_01_m",
-                            "img_product_sanitox_reference_02_02_m",
-                            "img_product_sanitox_reference_02_03_m",
-                            "img_product_sanitox_reference_02_04_m",
-                            "img_product_sanitox_reference_02_05_m",
-                            "img_product_sanitox_reference_02_06_m",
-                            "img_product_sanitox_reference_03_01_m",
-                            "img_product_sanitox_reference_03_02_m",
-                            "img_product_sanitox_reference_03_03_m",
-                            "img_product_sanitox_reference_03_04_m",
-                            "img_product_sanitox_reference_03_05_m",
-                            "img_product_sanitox_reference_03_06_m"
+                            "img_product_mailsafer_reference_01_01_m",
+                            "img_product_mailsafer_reference_01_02_m",
+                            "img_product_mailsafer_reference_01_03_m",
+                            "img_product_mailsafer_reference_01_04_m",
+                            "img_product_mailsafer_reference_01_05_m",
+                            "img_product_mailsafer_reference_01_06_m",
+                            "img_product_mailsafer_reference_02_01_m",
+                            "img_product_mailsafer_reference_02_02_m",
+                            "img_product_mailsafer_reference_02_03_m",
+                            "img_product_mailsafer_reference_02_04_m",
+                            "img_product_mailsafer_reference_02_05_m",
+                            "img_product_mailsafer_reference_02_06_m",
+                            "img_product_mailsafer_reference_03_01_m",
+                            "img_product_mailsafer_reference_03_02_m",
+                            "img_product_mailsafer_reference_03_03_m",
+                            "img_product_mailsafer_reference_03_04_m",
+                            "img_product_mailsafer_reference_03_05_m",
+                            "img_product_mailsafer_reference_03_06_m"
                         ], 
                         id='cont4', 
                         class='bg_grey'
@@ -156,20 +156,16 @@
 
                 {{
                     fn.cont_use(
-                        title='똑똑한 <em>새니톡스</em> 이용법', 
-                        decs='새니톡스를 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
+                        title='똑똑한 <em>메일세이퍼</em> 이용법', 
+                        decs='메일세이퍼를 도입하는 기업 환경에 따라 다양한 구축 모델을 제공하여 기업에 최적화된 서비스로 제공합니다.', 
                         list_decs=[
                             {
-                                title:'새니톡스 어플라이언스',
-                                decs : '별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 단일 장비에서 웹 서버, 파일 서버(SFTP, NFS), 메일 서버(MTA), 웹API 등 다양한 시스템 연동을 지원하므로 높은 확장성을 경험하실 수 있습니다.'
+                                title:'메일세이퍼 구축형',
+                                decs : '메일세이퍼 구축형은 기업 내부에 서버를 구축하여 기업 맞춤식 도입이 가능합니다. 보안성과 안정성에 초점을 둔 대규모 인프라가 구축된 기업에게 적합합니다.'
                             },
                             {
-                                title:'새니톡스 클라우드',
-                                decs : '새니톡스 EP(Endpoint Platform)는 메일, 웹, 파일서버 등 시스템 연동없이 무해화를 실행하는 새니톡스의 클라우드 버전입니다.  IT 전문운영 인력이 부족한 소호·중소기업에서도 손쉽게 사용하실 수 있습니다.'
-                            },
-                            {
-                                title:'새니톡스 SDK',
-                                decs : '새니톡스 CDR 엔진을 자체 소프트웨어/하드웨어의 제품 또는 서비스에 통합할 수 있도록 API를 제공합니다. 소프트웨어 개발사 및 서비스 제공 기업이라면 원하는 어느곳에든 적용하실 수 있습니다.'
+                                title:'메일세이퍼 어플라이언스',
+                                decs : '메일세이퍼 어플라이언스는 별도의 소프트웨어 설치나 설정이 필요 없는 일체형 장비로 제공됩니다. 추가 설치 없이 신청 후 최대 2주 안에 설치 및 운영이 가능합니다.'
                             }
                         ], 
                         id='cont5', 
@@ -179,10 +175,10 @@
 
                 {{
                     fn.cont_guide(
-                        title1="새니톡스가 궁금하신가요?", 
+                        title1="메일세이퍼가 궁금하신가요?", 
                         title2='편하신 방법으로 문의하세요!', 
-                        tel='02-2006-6989', 
-                        mail='sanitox@jiran.com', 
+                        tel='02-2006-6970', 
+                        mail='ms@jiran.com', 
                         id='', 
                         class='guide'
                     )
