@@ -328,6 +328,10 @@
     color: #555;
 }
 
+.main .main_sec.news .news_lists {
+    margin-top: 47px;
+}
+
 .main .main_sec.news .news_lists ul {
     font-size: 0;
     margin: 0 -20px;
