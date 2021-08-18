@@ -1,0 +1,245 @@
+
+{% set title = '지란지교시큐리티' %}
+{% set products_type = 'main' %}
+
+
+
+{% extends "./templates/_layout.njk" %}
+
+{% block content %}
+<div class="main">
+    <div class="main_sec visual">
+        <div class="inset">
+            <p class="logo">JIRANSECURITY</p>
+            <p class="main_txt">사람이 있고,<br>보안이 있습니다.</p>
+            <p class="sub_txt">지란지교시큐리티의 보안 기술은 사람을 보호하는 것에서 출발합니다.<br>오늘도 우리는 기술을 넘어 보안 인식에 대한 공유와 협력을 꿈꿉니다.</p>
+            <div class="img"><img src="../../images/main/img_visual_sample.png" alt=""></div>
+        </div>
+    </div>
+    <div class="main_sec solution">
+        <div class="inset">
+            <p class="main_txt">오늘보다 더 안전한 내일을 만드는 지란지교시큐리티</p>
+            <p class="sub_txt">지란지교시큐리티의 보안솔루션을 만나보세요.</p>
+            <div class="solution_lists">
+                <ul>
+                    <li class="lists">
+                        <div class="box">
+                            <div class="ico"><img src="../../images/main/img_main_product_threat_m.png" alt=""></div>
+                            <p class="title">악성코드 위협 대응</p>
+                            <div class="decs">
+                                <p>알려지지 않은<br> 보안 위협에 대응하세요</p>
+                                <ul class="list">
+                                    <li>스팸스나이퍼</li>
+                                    <li>메일스크린</li>
+                                    <li>제이볼트</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lists">
+                        <div class="box">
+                            <div class="ico"><img src="../../images/main/img_main_product_mail_m.png" alt=""></div>
+                            <p class="title">메일보안</p>
+                            <div class="decs">
+                                <p>고도화, 지능화되고 있는<br> 이메일 보안 위협에 대응하세요</p>
+                                <ul class="list">
+                                    <li>스팸스나이퍼</li>
+                                    <li>메일스크린</li>
+                                    <li>제이볼트</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lists">
+                        <div class="box">
+                            <div class="ico"><img src="../../images/main/img_main_product_docu_m.png" alt=""></div>
+                            <p class="title">문서보안</p>
+                            <div class="decs">
+                                <p>기업의 정보자산을<br> 체계적으로 관리하세요</p>
+                                <ul class="list">
+                                    <li>스팸스나이퍼</li>
+                                    <li>메일스크린</li>
+                                    <li>제이볼트</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lists">
+                        <div class="box">
+                            <div class="ico"><img src="../../images/main/img_main_product_mobile_m.png" alt=""></div>
+                            <p class="title">모바일보안</p>
+                            <div class="decs">
+                                <p>모바일을 통한<br> 기업 정보 유출을 방지하세요</p>
+                                <ul class="list">
+                                    <li>스팸스나이퍼</li>
+                                    <li>메일스크린</li>
+                                    <li>제이볼트</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="more">
+                <a href="">레퍼런스 더보기</a>
+            </div>
+        </div>
+    </div>
+    <div class="main_sec movie">
+        <div class="inset">
+            <div class="txt_sec">
+                <p class="main_txt">보안 가치를 밝히는 지란지교시큐리티</p>
+                <p class="sub_txt">100년 가는 보안SW 전문기업 지란지교시큐리티가 깨끗하고 안전한 보안세상을 만들어 갑니다. </p>
+                <a href="" class="more">영상 더보기</a>
+            </div>
+            <div class="movie">
+                <video width="840" height="472" poster="../../images/main/img_video_sample_m.png" controls>
+                    <source src="../../movie/800_800.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="main_sec customer">
+        <div class="inset">
+            <div class="txt_sec">
+                <p class="main_txt">고객사 이야기</p>
+                <p class="sub_txt">지란지교시큐리티의 고객사 이야기를 들어보세요.</p>
+            </div>
+            <div class="swiper_wrap">
+                <div class="customer_lists swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="box_top">
+                                    <div class="logo1"><img src="../../images/main/img_customers_sanitox_company_m.png" alt=""></div>
+                                    <div class="logo2"><img src="../../images/main/img_customers_sanitox_m.png" alt=""></div>
+                                    <p class="title">한국남부발전㈜</p>
+                                </div>
+                                <div class="box_cont">
+                                    <p class="decs">외부에서 유입되는 다양한 자료 중 위협이 될 수 있는 요소를 차단하기 위해 새니톡스를 도입했어요. RPA로 다양한 대외자료를 수집하여 업무에 활용 중인데, 자동 수집의 한계점인 신뢰성 낮은 문서 수집에서 발생되는 랜섬웨어 감염 위협으로 부터 보호하고자 새니톡스를 도입하였고, 수집된 자료를 무해화 솔루션으로 사전 보안조치함으로써 안정적인 업무 수행이 가능해졌습니다.</p>
+                                    <p class="from">디지털뉴딜부</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="box_top">
+                                    <div class="logo1"><img src="../../images/main/img_customers_docuone.png" alt=""></div>
+                                    <div class="logo2"><img src="../../images/main/img_customers_spamsniper_m.png" alt=""></div>
+                                    <p class="title">한국남부발전㈜</p>
+                                </div>
+                                <div class="box_cont">
+                                    <p class="decs">외부에서 유입되는 다양한 자료 중 위협이 될 수 있는 요소를 차단하기 위해 새니톡스를 도입했어요. RPA로 다양한 대외자료를 수집하여 업무에 활용 중인데, 자동 수집의 한계점인 신뢰성 낮은 문서 수집에서 발생되는 랜섬웨어 감염 위협으로 부터 보호하고자 새니톡스를 도입하였고, 수집된 자료를 무해화 솔루션으로 사전 보안조치함으로써 안정적인 업무 수행이 가능해졌습니다.</p>
+                                    <p class="from">디지털뉴딜부</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="box_top">
+                                    <div class="logo1"><img src="../../images/main/img_customers_docuone.png" alt=""></div>
+                                    <div class="logo2"><img src="../../images/main/img_customers_spamsniper_m.png" alt=""></div>
+                                    <p class="title">한국남부발전㈜</p>
+                                </div>
+                                <div class="box_cont">
+                                    <p class="decs">외부에서 유입되는 다양한 자료 중 위협이 될 수 있는 요소를 차단하기 위해 새니톡스를 도입했어요. RPA로 다양한 대외자료를 수집하여 업무에 활용 중인데, 자동 수집의 한계점인 신뢰성 낮은 문서 수집에서 발생되는 랜섬웨어 감염 위협으로 부터 보호하고자 새니톡스를 도입하였고, 수집된 자료를 무해화 솔루션으로 사전 보안조치함으로써 안정적인 업무 수행이 가능해졌습니다.</p>
+                                    <p class="from">디지털뉴딜부</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="box_top">
+                                    <div class="logo1"><img src="../../images/main/img_customers_docuone.png" alt=""></div>
+                                    <div class="logo2"><img src="../../images/main/img_customers_spamsniper_m.png" alt=""></div>
+                                    <p class="title">한국남부발전㈜</p>
+                                </div>
+                                <div class="box_cont">
+                                    <p class="decs">외부에서 유입되는 다양한 자료 중 위협이 될 수 있는 요소를 차단하기 위해 새니톡스를 도입했어요. RPA로 다양한 대외자료를 수집하여 업무에 활용 중인데, 자동 수집의 한계점인 신뢰성 낮은 문서 수집에서 발생되는 랜섬웨어 감염 위협으로 부터 보호하고자 새니톡스를 도입하였고, 수집된 자료를 무해화 솔루션으로 사전 보안조치함으로써 안정적인 업무 수행이 가능해졌습니다.</p>
+                                    <p class="from">디지털뉴딜부</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <div class="box_top">
+                                    <div class="logo1"><img src="../../images/main/img_customers_docuone.png" alt=""></div>
+                                    <div class="logo2"><img src="../../images/main/img_customers_spamsniper_m.png" alt=""></div>
+                                    <p class="title">한국남부발전㈜</p>
+                                </div>
+                                <div class="box_cont">
+                                    <p class="decs">외부에서 유입되는 다양한 자료 중 위협이 될 수 있는 요소를 차단하기 위해 새니톡스를 도입했어요. RPA로 다양한 대외자료를 수집하여 업무에 활용 중인데, 자동 수집의 한계점인 신뢰성 낮은 문서 수집에서 발생되는 랜섬웨어 감염 위협으로 부터 보호하고자 새니톡스를 도입하였고, 수집된 자료를 무해화 솔루션으로 사전 보안조치함으로써 안정적인 업무 수행이 가능해졌습니다.</p>
+                                    <p class="from">디지털뉴딜부</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main_sec news">
+        <div class="inset">
+            <div class="txt_sec">
+                <p class="main_txt">최신소식</p>
+                <p class="sub_txt">지란지교시큐리티의 최신소식을 만나보세요.</p>
+            </div>
+            <div class="news_lists">
+                <ul>
+                    <li class="lists">
+                        <a href="" class="box">
+                            <span class="label">뉴스</span>
+                            <div class="img"><img src="../../images/main/img_video_sample_m.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="decs">지란지교시큐리티, 최신 악성메일 트렌드 웹사이트 오픈</p>
+                                <p class="from">데이터넷</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="lists">
+                        <a href="" class="box">
+                            <span class="label">공지</span>
+                            <div class="img"><img src="../../images/main/img_video_sample_m.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="decs">지란지교시큐리티, 최신 악성메일 트렌드 웹사이트 오픈</p>
+                                <p class="from">데이터넷</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="lists">
+                        <a href="" class="box">
+                            <span class="label">뉴스</span>
+                            <div class="img"><img src="../../images/main/img_video_sample_m.png" alt=""></div>
+                            <div class="txt_box">
+                                <p class="decs">지란지교시큐리티, 최신 악성메일 트렌드 웹사이트 오픈</p>
+                                <p class="from">데이터넷</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="more">
+                <a href="">관련 뉴스 더보기</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+      var swiper = new Swiper(".customer_lists", {
+        slidesPerView: 2,
+        spaceBetween : 40,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+      });
+    </script>
+{% endblock %}
+    

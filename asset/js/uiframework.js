@@ -1794,7 +1794,8 @@
 		},
 		// hideQuickMenu
 		_bindEvents : function (){
-			var _ = this;
+			var _ = this,
+                scrollAnimate = false;
 			win.on('changeSize', function(e, mode){
 				_.mediaInfo = mode;
 				_.currentImgLoaded(mode);
@@ -1804,10 +1805,11 @@
             .on('load', function(e){
 				_.initLibray();
                 _.initSlider();
-                _.initHeight();
+                if($('#wrap').hasClass('.products')) _.initHeight();
+                
             })
             .on('load resize', function(e){
-                _.initHeight();
+                if($('#wrap').hasClass('.products')) _.initHeight();
             })
 
 
@@ -1854,19 +1856,41 @@
                 _[fn](e, $this);
             })
 
-            $(window).on('mousewheel.banner', function(e){
-				var wheelPos = e.wheelDelta ? evt.wheelDelta / 10 : (e.originalEvent.detail || e.originalEvent.deltaY);
-				var scrollTop = $(this).scrollTop();
-                var scrollNav = $('[data-modules-scrollspy]').offset().top;
-                var animate = false;
-                if(wheelPos > 0 && scrollTop < scrollNav-10 && !animate ){
-                    e.preventDefault();
-                    $('html, body').stop().animate({scrollTop: scrollNav}, 500, function(){
-                        animate = false;
-                    });
-                }
+            // $(window).on('mousewheel.banner', function(e){
+            //     console.log('ddd')
+                // return false;
+				// var wheelPos = e.wheelDelta ? evt.wheelDelta / 10 : (e.originalEvent.detail || e.originalEvent.deltaY);
+				// var scrollTop = $(this).scrollTop();
+                // var scrollNav = $('[data-modules-scrollspy]').offset().top;
+                // var animate = false;
+                // if(wheelPos > 0 && scrollTop < scrollNav-10 && !animate ){
+                //     setTimeout(function(){
+                //         $('html, body').stop().animate({scrollTop: scrollNav}, 500, function(){
+                //             animate = false;
+                //         });
+                //     }, 100)
+                    
+                // }
 
-			});
+			// },{ passive:false });
+            window.addEventListener("wheel", function(e){
+                if($('#wrap').hasClass('.products')){   
+                    if(scrollAnimate) e.preventDefault();
+                    var wheelPos = e.wheelDelta ? e.wheelDelta / 10 : (e.originalEvent.detail || e.originalEvent.deltaY);
+                    var scrollTop = $(this).scrollTop();
+                    var scrollNav = $('[data-modules-scrollspy]').offset().top;
+                    
+                    if(wheelPos < 0 && scrollTop < scrollNav-10 && !scrollAnimate ){
+                        scrollAnimate = true;
+                        setTimeout(function(){
+                            $('html, body').stop().animate({scrollTop: scrollNav}, 500, function(){
+                                scrollAnimate = false;
+                            });
+                        }, 100)
+                        return false;
+                    }
+                }
+            }, { passive:false })
 
         },
 
