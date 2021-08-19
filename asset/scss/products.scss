@@ -850,6 +850,7 @@ $colors: (
                     .lists{
                         width: 290px;
                         padding: 0 5px;
+                        min-width: 0;
                         > div{
                             border: 1px solid #f0f0f2;
                             padding: 30px 30px 110px 30px;

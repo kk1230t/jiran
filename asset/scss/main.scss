@@ -331,7 +331,7 @@
 
         }
         &.movie{
-            background: #fff6f4;
+            background:#fff6f4 url('../../images/main/bg_video.png') no-repeat center;
             .txt_sec{
                 width: 310px;
                 float: left;
@@ -366,6 +366,7 @@
                 video{
                     display: block;
                 }
+                // display: none;
             }
             .more{
                 text-decoration: none;
@@ -385,6 +386,18 @@
                     margin-left: 4px;
                 }
             }
+            // .symbol{
+            //     .symbol1, .symbol2, .symbol3{
+            //         position: absolute;
+            //         top: 50%;
+            //         left: 50%;
+            //         transform: translate(-50%, -50%);
+            //     }
+            //     .symbol1{
+            //         // margin: -288px 0 0 300px;
+            //         transform: translate(-200px, -300px);
+            //     }
+            // }
             @include respondTo(tablet){
                 .txt_sec{
                     width: auto;
