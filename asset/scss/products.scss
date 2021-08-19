@@ -778,6 +778,7 @@ $colors: (
                 margin: 0 -20px;
                 .lists{
                     width: 33.3333%;
+                    min-width: 380px;
                     display: inline-block;
                     padding: 0 20px;
                     text-align: center;
@@ -828,6 +829,17 @@ $colors: (
                             margin-top: 24px;
                         }
                     }
+                    .link{
+                        font-size: 15px;
+                        position: absolute;
+                        bottom: 54px;
+                        left: 40px;
+                    }
+                }
+            }
+            @include respondTo(tablet){
+                .box{
+                    justify-content: left;
                 }
             }
             @include respondTo(mobile){
@@ -876,6 +888,13 @@ $colors: (
                                 font-size: 15px;
                                 margin-top: 20px;
                             }
+                        }
+                        .link{
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            text-indent: -9999em;
                         }
                     }
                 }

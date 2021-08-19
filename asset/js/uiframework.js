@@ -1967,7 +1967,7 @@
         initSlider : function(mode){
             var _ = this;
             var swiper;
-            if(_.mediaInfo == 'mobile'){
+            if(_.mediaInfo == 'mobile' || _.mediaInfo == 'tablet'){
                 swiper = new Swiper("#box_slider", {
                     slidesPerView: "auto",
                     spaceBetween: 10
