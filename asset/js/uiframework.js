@@ -1906,10 +1906,10 @@
                     lists.each(function(i, el){
                         pos.push([$(el).offset().top, $(el).outerHeight()])
                     })
-                    if(scrollTop >= pos[0][0] && scrollTop < (pos[pos.length-1][0])-30){
+                    if(scrollTop >= pos[0][0] && scrollTop < (pos[1][0])-30){
                         if(!scrollAnimate){
                             scrollAnimate = true;
-                            for (var i = 0; i < pos.length-1; i++) {
+                            for (var i = 0; i < 1; i++) {
                                 if(pos[i][0] <= scrollTop && pos[i+1][0] > scrollTop ){
                                     index = i;
                                     break;
