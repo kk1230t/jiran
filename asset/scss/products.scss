@@ -1,21 +1,22 @@
 @import "./asset/scss/core/mixins";
 @import "./asset/scss/core/varialbles";
 
-$colors: 
-    #00848d,    //새니톡스
-    #00398f,    //파일론
-    #009e6a,    //머드픽스
-    #c00011,    //스팸스나이퍼
-    #00398f,    //메일스크린
-    #e35227,    //제이볼트 플러스
-    #0066ad,    //다큐원
-    #0066ad,    //오피스하드 VEX
-    #365abd,    //모바일키퍼
-    #365abd,    //메일세이퍼
-    #e35227,    //제이볼트 체인
-    #00a8a6,    //디센트
-    #0066ad,    // 다큐엑스
-    #0066ad;    // 딥아이알
+$colors: (
+    sanitox : #00848d,    //새니톡스
+    pylon : #00398f,    //파일론
+    mudfix : #009e6a,    //머드픽스
+    spamsniper : #c00011,    //스팸스나이퍼
+    mailscreen : #00398f,    //메일스크린
+    jvaultplus : #e35227,    //제이볼트 플러스
+    docuone : #0066ad,    //다큐원
+    officehard : #0066ad,    //오피스하드 VEX
+    mobilekeeper : #365abd,    //모바일키퍼
+    mobilesafer : #365abd,    //메일세이퍼
+    jvaultchain : #e35227,    //제이볼트 체인
+    dcent : #00a8a6,    //디센트
+    docux : #0066ad,    // 다큐엑스
+    deepir : #0066ad    // 딥아이알
+    );
 #wrap.products{
     overflow-x:visible;
     #header{
@@ -64,9 +65,9 @@ $colors:
         }
     }
     $i : 0;
-    @each $color in $colors {
+    @each $key, $color in $colors {
         $i: $i+1;
-        &.page0#{$i}{
+        &.#{$key}{
             background: $color;
             .prd_scroll_spy{
                 .prd_sec{
