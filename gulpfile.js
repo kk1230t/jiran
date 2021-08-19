@@ -91,9 +91,10 @@ gulp.task("sass", () => {
     .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({overrideBrowserslist : targetBrowsers}))
-    // .pipe(minifyCss())
-    .pipe(beautify.css({ indent_size: 4 }))
+    .pipe(minifyCss())
+    // .pipe(beautify.css({ indent_size: 4 }))
     .pipe(sourcemaps.write('.'))
+    // .pipe(beautify.css({ indent_size: 4 }))
     .pipe(gulp.dest(dist_scss_folder))
     .pipe(gulpConnect.reload());
 });

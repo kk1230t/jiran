@@ -1874,10 +1874,13 @@
 
 			// },{ passive:false });
             window.addEventListener("wheel", function(e){
-                if($('#wrap').hasClass('.products')){   
-                    if(scrollAnimate) e.preventDefault();
-                    var wheelPos = e.wheelDelta ? e.wheelDelta / 10 : (e.originalEvent.detail || e.originalEvent.deltaY);
-                    var scrollTop = $(this).scrollTop();
+                var scrollTop = $(this).scrollTop();
+                var wheelPos = e.wheelDelta ? e.wheelDelta / 10 : (e.originalEvent.detail || e.originalEvent.deltaY);
+                var index = 0;
+                if($('#wrap').hasClass('products')){   
+                    e.preventDefault();
+                    
+                    
                     var scrollNav = $('[data-modules-scrollspy]').offset().top;
                     
                     if(wheelPos < 0 && scrollTop < scrollNav-10 && !scrollAnimate ){
@@ -1888,8 +1891,58 @@
                             });
                         }, 100)
                         return false;
+                    }else{
+                        if(wheelPos > 0){
+                            $(window).scrollTop(scrollTop-80)
+                        }else{
+                            $(window).scrollTop(scrollTop+80)
+                        }
                     }
                 }
+                if($('#wrap').hasClass('main')){
+                    e.preventDefault();
+                    var lists = $('.main_sec');
+                    var pos = [];
+                    lists.each(function(i, el){
+                        pos.push([$(el).offset().top, $(el).outerHeight()])
+                    })
+                    if(scrollTop >= pos[0][0] && scrollTop < (pos[pos.length-1][0])-30){
+                        if(!scrollAnimate){
+                            scrollAnimate = true;
+                            for (var i = 0; i < pos.length-1; i++) {
+                                if(pos[i][0] <= scrollTop && pos[i+1][0] > scrollTop ){
+                                    index = i;
+                                    break;
+                                }
+                                
+                            }
+                            if(pos[index][0] == scrollTop){
+                                if(wheelPos < 0){
+                                    index+=1
+                                }else{
+                                    index-=1
+                                }
+                            }else{
+                                if(wheelPos < 0){
+                                    index+=1
+                                }
+                            }
+                            if(index < 0) index = 0;
+                            $('html, body').stop().animate({scrollTop: pos[index][0]}, 500, function(){
+                                scrollAnimate = false;
+                            });
+                        }
+
+                    }else{
+                        if(wheelPos > 0){
+                            $(window).scrollTop(scrollTop-80)
+                        }else{
+                            $(window).scrollTop(scrollTop+80)
+                        }
+                    }
+                }
+                    
+
             }, { passive:false })
 
         },
