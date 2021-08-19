@@ -176,6 +176,9 @@ gulp.task('njk_html', function(){
     if(argv.njk_src.indexOf('templates') !== -1){
       src = src_folder + 'njk/**/!(_)*.njk'
       console.log('all')
+    }else if(argv.njk_src.indexOf('main') !== -1){
+      src = src_folder + 'njk/**/!(_)*.njk';
+      console.log(src)
     }else{
       src = './'+argv.njk_src.replace('products', '**');
     }
