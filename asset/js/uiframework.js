@@ -1192,6 +1192,71 @@
 
 
 /**
+ * @name menus
+ * @selector [data-modules-menus]'
+ */
+// $('[data-modules-menus]').menus('create')
+;(function(core, $, undefined){
+    "use strict";
+    var win = $(window),
+    forEach = Array.prototype.forEach,
+    activeClass = 'ui-active',
+    Default = {
+        buttomAlign: false,
+        activeClass : activeClass
+    },
+    
+    name = "menus",
+    namespace = ".menus",
+    ui = core.ui,
+    Widget = ui.Widget,
+    Menus = Widget.extend({
+		name : name,
+		init : function(element, config){
+			var _ = this;
+			
+			var options = _.options = $.extend({}, Default, config);
+			Widget.fn.init.call(_, element, options);
+            _.element = $(element);
+			_._bindEvents();
+		},
+		_bindEvents : function(){
+            var _ = this;
+            _.element.off(namespace).on('mouseenter'+namespace, '[data-menu]', function(e){
+                var $this = $(this);
+                var target = $this.find(' > [data-submenu]');
+                if(target.length > 0){
+                    $this.addClass(_.options.activeClass);
+                    $('#header').addClass('gnb_open');
+                    if(_.options.buttomAlign){
+                        _.setPos(target);
+                    }                    
+                }
+            })
+            .on('mouseleave'+namespace, '[data-menu]', function(e){
+                var $this = $(this);
+                var target = $this.find(' > [data-submenu]');
+                if(target.length > 0){
+                    $this.removeClass(_.options.activeClass);
+                    $('#header').removeClass('gnb_open');
+                    target.removeAttr('style');
+                }
+            })
+        },
+        setPos : function(target){
+            var _ = this;
+            var height = _.element.offset().top +  _.element.outerHeight();
+            var menuHeight = target.offset().top + target.outerHeight();
+            if(height < menuHeight){
+                target.css({"transform":"translateY("+(height - menuHeight)+"px)"})
+            }
+        }
+
+	})
+    ui.plugin(Menus);
+})(window[LIB_NAME], jQuery);
+
+/**
  * @name scrollspy
  * @selector [data-modules-scrollspy]'
  */
@@ -1749,6 +1814,10 @@
         sticky : {
             el : '[data-modules-sticky]',
             name : "sticky"
+        },
+        menus : {
+            el : '[data-modules-menus]',
+            name : "menus"
         }
     },
     commonUi = Widget.extend({

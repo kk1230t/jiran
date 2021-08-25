@@ -17,17 +17,28 @@ $colors: (
     docux : #0066ad,    // 다큐엑스
     deepir : #0066ad    // 딥아이알
     );
+
+
+
+
 #wrap.products{
+    padding-top: 100px;
     overflow-x:visible;
+    @include respondTo(tablet){
+        padding-top: 60px;
+    }
+    @include respondTo(mobile){
+        padding-top: 60px;
+    }
     #header{
         background: transparent;
         box-shadow: none;
         box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             h1 a{
                 background-image: url('../../images/product/ci-jiran-security-wh.png');
                 background-size: 176px;
@@ -120,7 +131,7 @@ $colors: (
     }
 
     #container{
-        padding-top: 760px;
+        margin-top: 760px;
         width: 100%;
         min-width: 0;
         z-index: 999;
@@ -134,6 +145,9 @@ $colors: (
         min-width: 0;
         #header{
             min-width: 0;
+        }
+        #container{
+            margin-top: 660px;
         }
         #footer{
             min-width: 0;
@@ -153,12 +167,12 @@ $colors: (
     width: 1280px;
     position: fixed;
     box-sizing: border-box;
-    top:0;
+    top:100px;
     left: 50%;
     transform: translate(-50%, 0);
-    height: 760px;
+    height: 660px;
     z-index: 1;
-    padding-top: 200px;
+    padding-top: 90px;
     color: #fff;
     img{
         max-width: 100%;
@@ -263,7 +277,7 @@ $colors: (
     @include respondToMinMax(0,1279){
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 140px;
+        padding-top: 40px;
         width: 100%;
         transform: translate(0, 0);
         left: 0;
@@ -283,7 +297,7 @@ $colors: (
     }
     @include respondTo(mobile){
         text-align: center;
-        padding-top: 107px;
+        padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
         .title{
